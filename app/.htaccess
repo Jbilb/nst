@@ -1,0 +1,14 @@
+# SetEnv PHP_VER 5_4
+RewriteEngine on
+
+# Redirection pour les pages page5
+
+Options +FollowSymlinks
+
+RewriteRule ^actualite-([a-zA-Z0-9|\_]+)\-bms.php$ actualite-template.php?id=$1 [QSA,L]
+
+# REDIRECTION AUTRES PAGES (URL SIMPLIFIEE)
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php [QSA,L]
