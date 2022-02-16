@@ -12,10 +12,10 @@ Codes du projet
 
 2. Code hébergement / FTP / Serveur
  
-* hôte : 
+* hôte : ftp.cluster031.hosting.ovh.net
 * port : 
-* id : 
-* mot de passe : 
+* id : doncamh-mk
+* mot de passe : 999TtuY5N5zYe
 
 3. Code BDD
  
