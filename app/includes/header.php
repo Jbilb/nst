@@ -18,6 +18,24 @@
         $classHTML = '';
     }
     include 'includes/helper.php';
+    include 'includes/helper-mag.php';
+    include 'controller/MainController.php';
+    
+    // *** Mag part
+    if(!empty($_GET['page'])) {
+        $pageName = $_GET['page'];
+    } else {
+        $pageName = '';
+    }
+    switch($pageName) 
+    {      
+        case 'article':
+            include 'controller/ArticleController.php';
+        break;     
+        case 'mag':
+            include 'controller/MagController.php';
+        break;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr" class="<?php echo $classHTML; ?>">

@@ -1,0 +1,10 @@
+# Compression des fichiers
+SetOutputFilter DEFLATE
+
+# Empêcher le listing des répertoires
+Options -Indexes
+
+# Ajout pour accéder au cors
+<IfModule mod_headers.c>    
+    Header set Access-Control-Allow-Origin ['*']
+</IfModule>

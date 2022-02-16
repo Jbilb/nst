@@ -275,10 +275,16 @@ br:not(.keep) {
 @import 'pages/_contact';
 @import 'pages/_legals';
 @import 'pages/_erreur404';
+@import 'pages/_mag';
 
 // Components
 @import 'components/_cookies';
 @import 'components/_formulaire';
+@import 'components/_icons';
+@import 'components/_form-comment';
+@import 'components/_form-sort';
+@import 'components/_actu';
+@import 'components/_article';
 
 
 // Utilities

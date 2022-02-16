@@ -12,3 +12,23 @@ RewriteRule ^actualite-([a-zA-Z0-9|\_]+)\-bms.php$ actualite-template.php?id=$1 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f 
 RewriteRule ^(.*)$ $1.php [QSA,L]
+
+# ----- HOME MAG
+
+RewriteRule ^mag\/?$ le-mag.php?page=mag [QSA,L]
+
+# ----- HOME MAG WITH CATEGORIE OU TAG
+
+RewriteRule ^mag\/([a-zA-Z0-9|\-]+)\/?$ le-mag.php?page=mag&slug=$1 [QSA,L]
+
+# ----- HOME MAG WITH CATEGORIE + TAG
+
+RewriteRule ^mag\/([a-zA-Z0-9|\-]+)\/([a-zA-Z0-9|\-]+)\/?$ le-mag.php?page=mag&categorie=$1&tag=$2 [QSA,L]
+
+# ----- PAGE ARTICLE
+
+RewriteRule ^article\/([a-zA-Z0-9|\-]+)\/?$ le-mag.php?page=article&slug=$1 [QSA,L]
+
+# ----- PAGE ARTICLE (APERCU)
+
+RewriteRule ^apercu-article\/([0-9]+)\/?$ le-mag.php?page=article&id_article=$1&apercu=true [QSA,L]
