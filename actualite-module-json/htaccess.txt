@@ -1,5 +1,0 @@
-# Redirection eventuelles pour les pages
-
-Options +FollowSymlinks
-
-RewriteRule ^actualite-([a-zA-Z0-9|\_]+)\-la-belle-liegeoise.php$ actualite-template.php?id=$1 [QSA,L]
