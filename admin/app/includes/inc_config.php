@@ -3,9 +3,9 @@
 // *** Database connexion
 
 define('DB_HOST','localhost');
-define('DB_NAME','doncamillo');
-define('DB_USER','jordan');
-define('DB_PASS','meltingK31');
+define('DB_NAME','doncamillo_admin');
+define('DB_USER','root');
+define('DB_PASS','root');
 
 // *** Site base (admin)
 define('SITE_ADMIN_BASE','http://localhost:3000/doncamillo-restaurants.fr/admin/app/');

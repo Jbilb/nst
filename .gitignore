@@ -16,3 +16,6 @@ admin/app/js/tinymce/tinymce.js
 admin/app/sass/font-awesome
 admin/app/sass/gentelella
 .DS_Store
+admin/app/includes/inc_config.php
+admin/gulpfile.js
+gulpfile.js
