@@ -8,8 +8,8 @@ p {
     font-family: $font;
     font-weight: $regular;
     text-align: left;
-    color: $gris;
-    line-height: 1.8 !important;
+    color: $noir;
+    line-height: 1.5 !important;
     margin: 0;
 
     strong {
@@ -17,7 +17,11 @@ p {
     }
 
     @media(max-width:$screen-md) {
-        font-size: 14px;
+        font-size: 20px;
+    }
+
+    @media(max-width:$screen-xss) {
+        font-size: 16px;
     }
 }
 
@@ -28,13 +32,12 @@ p {
 
 .h1 {
     margin: 0;
-    font-family: $font;
-    font-weight: $black;
-    @include fluid-text(11px, 20px, 1, 991px, 1920px);
-    line-height: 1.1 !important;
+    font-family: $font-rexton;
+    font-weight: $regular;
+    @include fluid-text(24px, 60px, 1, 991px, 1920px);
 
     @media screen and (max-width:$screen-md) {
-        font-size: 25px;
+        font-size: 24px;
 
         br {
             display: none;
@@ -46,8 +49,97 @@ p {
     }
 }
 
-.h2 {}
+.h2 {
+    margin: 0;
+    font-family: $font;
+    font-weight: $semi-bold;
+    @include fluid-text(35px, 50px, 1, 991px, 1920px);
 
-.h3 {}
+    @media screen and (max-width:$screen-md) {
+        font-size: 35px;
 
-.h4 {}
+        br {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:340px) {
+        font-size: 30px;
+    }
+}
+
+.h3 {
+    margin: 0;
+    font-family: $font;
+    font-weight: $semi-bold;
+    @include fluid-text(30px, 40px, 1.25, 991px, 1920px);
+
+    @media screen and (max-width:$screen-md) {
+        font-size: 30px;
+
+        br {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:340px) {
+        font-size: 28px;
+    }
+}
+
+.h4 {
+    margin: 0;
+    font-family: $font;
+    font-weight: $semi-bold;
+    @include fluid-text(22px, 30px, 1.1, 991px, 1920px);
+
+    @media screen and (max-width:$screen-md) {
+        font-size: 22px;
+
+        br {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:340px) {
+        font-size: 20px;
+    }
+}
+
+.h5 {
+    margin: 0;
+    font-family: $font-rexton;
+    font-weight: $regular;
+    @include fluid-text(13px, 30px, 1, 991px, 1920px);
+
+    @media screen and (max-width:$screen-md) {
+        font-size: 13px;
+
+        br {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:340px) {
+        font-size: 12px;
+    }
+}
+
+.h160 {
+    margin: 0;
+    font-family: $font-rexton;
+    font-weight: $regular;
+    @include fluid-text(65px, 160px, 0.9, 991px, 1920px);
+
+    @media screen and (max-width:$screen-md) {
+        font-size: 65px;
+
+        br {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:340px) {
+        font-size: 60px;
+    }
+}

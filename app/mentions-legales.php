@@ -6,7 +6,7 @@ $HEADER_title = 'MENTIONS<br/> LÉGALES';
 include 'includes/helper.php';
 include 'includes/header.php';
 //MENTIONS LEGALES
-$LEGALS_client_societe = "NomDuClient";
+$LEGALS_client_societe = "Don Camillo";
 $LEGALS_client_name = "NOM DU RESPONSABLE DE PUBLICATION";
 $LEGALS_client_role = "FONCTION DU GERANT";
 $LEGALS_client_statut = "STATUT DE L'ENTREPRISE";
@@ -15,9 +15,9 @@ $LEGALS_client_nom_dirigeant = "NOM DU GERANT";
 $LEGALS_client_rcs = "RCS de XXX";
 $LEGALS_client_siren = "XXX XXX XXX";
 $LEGALS_client_siegesocial = "Adresse + CP + Ville";
-$LEGALS_client_mail  = "email@domaine.ext";
+$LEGALS_client_mail  = "email@doncamillo-restaurants.fr";
 $LEGALS_client_tel  = "XX XX XX XX XX";
-$LEGALS_client_url  = "www.domaine.ext";
+$LEGALS_client_url  = "www.doncamillo-restaurants.fr";
 ?>
 <section id="section-top">
     <div class="container-fluid blanc-bg">

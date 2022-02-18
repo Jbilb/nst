@@ -88,9 +88,11 @@
                 var elemHtml = $('html');
                 if (elemNav.hasClass('ouvert')) {
                     elemNav.removeClass('ouvert');
+                    $(this).removeClass('ouvert');
                     elemMenu.removeClass('ouvert');
                     elemHtml.removeClass('noscroll');
                 } else {
+                    $(this).addClass('ouvert');
                     elemNav.addClass('ouvert');
                     elemMenu.addClass('ouvert');
                     elemHtml.addClass('noscroll');

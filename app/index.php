@@ -1,7 +1,7 @@
 <?php 
 //VARIABLES include 'includes/helper.php'
 $PAGE_name = 'accueil';
-$HEADER_title = 'NomDuClient';
+$HEADER_title = 'Don Camillo';
 $HEADER_subtitle = '';
 //INCLUDE HELPER & HEADER
 

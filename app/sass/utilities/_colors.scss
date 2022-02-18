@@ -3,14 +3,77 @@
 *************************************************/
 
 $blanc : #ffffff;
-$noir : #000000;
+$noir : #2B2B2B;
 $gris : #7a8285;
 $gris-dark : #171313;
 $gris-light : #d5d5d5;
 
+
+$vert : #455033;
+$vert-fonce : #333E21;
+$vert3 : #5C6C32;
+$rose : #E39077;
+$rose-fonce : #B4725F;
+$beige : #F0E8DF;
+$beige-fonce : #CBBCAD;
+
 /*************************************************
 // CLASS COLORS
 *************************************************/
+.vert {
+    color: $vert !important;
+
+    &-bg {
+        background: $vert;
+        color: inherit !important;
+    }
+}
+
+.vert-fonce {
+    color: $vert-fonce !important;
+
+    &-bg {
+        background: $vert-fonce;
+        color: inherit !important;
+    }
+}
+
+.rose {
+    color: $rose !important;
+
+    &-bg {
+        background: $rose;
+        color: inherit !important;
+    }
+}
+
+.rose-fonce {
+    color: $rose-fonce !important;
+
+    &-bg {
+        background: $rose-fonce;
+        color: inherit !important;
+    }
+}
+
+.beige {
+    color: $beige !important;
+
+    &-bg {
+        background: $beige;
+        color: inherit !important;
+    }
+}
+
+.beige-fonce {
+    color: $beige-fonce !important;
+
+    &-bg {
+        background: $beige-fonce;
+        color: inherit !important;
+    }
+}
+
 
 .blanc {
     color: $blanc !important;

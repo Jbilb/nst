@@ -291,13 +291,10 @@ br:not(.keep) {
 @import 'partials/_menu';
 // Pages
 @import 'pages/_accueil';
-@import 'pages/_page2';
-@import 'pages/_page3';
-@import 'pages/_page4';
-@import 'pages/_page5';
-@import 'pages/_page7';
-@import 'pages/_page6';
-@import 'pages/_page8';
+@import 'pages/_page_histoire';
+@import 'pages/_page_carte';
+@import 'pages/_page_rejoindre';
+@import 'pages/_template-ville';
 @import 'pages/_contact';
 @import 'pages/_legals';
 @import 'pages/_erreur404';

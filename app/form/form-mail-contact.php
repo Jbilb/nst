@@ -18,11 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         switch ($_POST['form'])
         {
             case 'contact':
-                $email_subject = 'NomDuClient | Prise de contact';
-                $email_address = "contact@domaine.ext";
+                $email_subject = 'Don Camillo | Prise de contact';
+                $email_address = "contact@doncamillo-restaurants.fr";
                 $email_intro    = "Nouveau message reçu depuis votre site web :";
                 $email_mentions  = "<strong>Données personnelles :</strong> Cette personne accepte que les informations saisies dans ce formulaire puissent être exploitées dans le cadre de sa prise de contact, et afin de lui apporter une réponse. Elles ne doivent en aucun cas être transmises à des organismes tiers.";
-                $email_source  = "Ce message provient du <b>formulaire de contact</b> de votre site <b>www.domaine.ext </b>";
+                $email_source  = "Ce message provient du <b>formulaire de contact</b> de votre site <b>www.doncamillo-restaurants.fr </b>";
                 break;
         }
     }
@@ -150,12 +150,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail = new PHPMailer\PHPMailer\PHPMailer(true);
         try {
             $mail->CharSet = 'UTF-8';
-            $mail->setFrom('no-reply@domaine.ext','Site web domaine.ext');
+            $mail->setFrom('no-reply@doncamillo-restaurants.fr','Site web doncamillo-restaurants.fr');
             //$mail->addAddress('contact@example.com', 'Example Name'); Send mail to
             //$mail->AddCC('contact@example.com', 'Example Name'); Add copie to
             //$mail->AddBCC('contact@example.com', 'Example Name');  Add hiddden copie to
             //$mail->AddReplyTo('contact@example.com', 'Example Name'); Add reply to
-            $mail->addAddress($email_address, 'NomDuClient');
+            $mail->addAddress($email_address, 'Don Camillo');
             $mail->AddReplyTo($form_data['Email'], $form_data['Prénom'].' '.$form_data['Nom']);
             $mail->Subject = $email_subject;
             $mail->isHTML(true);

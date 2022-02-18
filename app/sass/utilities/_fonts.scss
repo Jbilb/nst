@@ -3,13 +3,39 @@
 *************************************************/
 
 @font-face {
-    font-family: 'font';
-    src: url('../fonts/font.eot');
-    src: url('../fonts/font.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/font.woff2') format('woff2'),
-        url('../fonts/font.woff') format('woff');
+    font-family: 'Rexton';
+    src: url('../fonts/Rexton-Regular.woff2') format('woff2'),
+        url('../fonts/Rexton-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Isidora';
+    src: url('../fonts/Isidora-Bold.woff2') format('woff2'),
+        url('../fonts/Isidora-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Isidora';
+    src: url('../fonts/Isidora-SemiBold.woff2') format('woff2'),
+        url('../fonts/Isidora-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Isidora';
+    src: url('../fonts/Isidora-Regular.woff2') format('woff2'),
+        url('../fonts/Isidora-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 
@@ -18,11 +44,15 @@
 *************************************************/
 
 
-$font : 'Open Sans';
+$font : 'Isidora';
+
+$font-rexton : 'Rexton';
 
 $regular : 400;
 
 $medium : 500;
+
+$semi-bold : 600;
 
 $bold : 700;
 
@@ -35,6 +65,10 @@ $black : 900;
 
 .medium {
     font-weight: $medium;
+}
+
+.semi-bold {
+    font-weight: $semi-bold;
 }
 
 .bold {
@@ -58,6 +92,54 @@ $black : 900;
 }
 
 
-/*************************************************
-// ICOMOON
-*************************************************/
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?xpqa0k');
+    src: url('../fonts/icomoon.eot?xpqa0k#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?xpqa0k') format('truetype'),
+        url('../fonts/icomoon.woff?xpqa0k') format('woff'),
+        url('../fonts/icomoon.svg?xpqa0k#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+    content: "\e900";
+}
+
+.icon-facebook:before {
+    content: "\ea90";
+}
+
+.icon-instagram:before {
+    content: "\ea92";
+}
+
+.icon-youtube:before {
+    content: "\ea9d";
+}
+
+.icon-linkedin:before {
+    content: "\eaca";
+}
+
+.icon-twitter:before {
+    content: "\ea96";
+}
