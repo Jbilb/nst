@@ -53,18 +53,20 @@
         include 'includes/nav.php';
         include 'includes/menu.php';
     ?>
-    <div id="wrapper" class="blanc-bg  <?php echo $classAnimation; ?>">
-        <header class="p-header heightJs" id="header">
-            <div class="p-header_bg"></div>
-            <div class="p-header_titre">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h1 class="h1">
-                                <?php echo $HEADER_title; ?>
-                            </h1>
+    <!-- START WRAPPER OVERSCROLLBAR-->
+    <div id="wrapper-scroll">
+        <div id="wrapper" class="blanc-bg  <?php echo $classAnimation; ?>">
+            <header class="p-header heightJs" id="header">
+                <div class="p-header_bg"></div>
+                <div class="p-header_titre">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h1 class="h1">
+                                    <?php echo $HEADER_title; ?>
+                                </h1>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>

@@ -35,9 +35,12 @@
     <script type="text/javascript" src="js/components/cookies.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="../node_modules/slick-carousel/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../node_modules/overlayscrollbars/js/jquery.overlayScrollbars.js"></script>
     <!-- endbuild -->
     <!-- END WRAPPER -->
     </div>
+    </div>
+    <!-- END WRAPPER OVERSCROLLBAR-->
     </body>
 
     </html>

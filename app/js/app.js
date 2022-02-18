@@ -1,5 +1,17 @@
 (function ($) {
     $(function () {
+
+        var instance = $('body').overlayScrollbars({
+            callbacks: {
+                onScroll: function (eventArgs) {
+                    var scroll = instance.scroll();
+                    var scrollPosition = scroll.position.y;
+                    navMasked(scrollPosition);
+                    $(window).trigger('window-scroll', scrollPosition);
+                },
+            }
+        }).overlayScrollbars();
+
         $(window).ready(function () {
             windowWidth = $(window).width();
             windowHeight = $(window).height();
@@ -11,7 +23,6 @@
             menu();
             animation();
             modal();
-            navMasked(scrollPos);
             parallax();
             inputFile();
             navMasked();
@@ -24,11 +35,6 @@
             windowWidth = $(window).width();
             windowHeight = $(window).height();
             add100Vh();
-        });
-
-        $(window).scroll(function () {
-            scrollPos = $(window).scrollTop();
-            navMasked(scrollPos);
         });
 
         ///////////////////////////////////////////////////////
@@ -49,7 +55,7 @@
         ///////////////////////////////////////////////////////
         function navMasked(scrollPosition) {
             var headerHeight = $('#header').height();
-            var headerHeightBy2 = headerHeight - (headerHeight - 100); // Régle la distance à laquelle la nav passe en compact
+            var headerHeightBy2 = headerHeight - (headerHeight - 100);
 
             if (scrollPosition > headerHeightBy2) {
                 $('.p-btnMenu').removeClass('masked');
@@ -66,9 +72,7 @@
             $(".scroll").on('click', function (event) {
                 event.preventDefault();
                 var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 900);
+                instance.scroll($(hash), 800, undefined, function () {});
             });
         };
 
@@ -173,8 +177,9 @@
                 var startScroll = elementTop - windowHeight + offStart * (end - init) / 100;
                 var endScroll = elementTop - windowHeight + offEnd * (end - init) / 100;
             }
-            $(window).scroll(function () {
-                var scrollPos = $(window).scrollTop();
+
+            $(window).on('window-scroll', function (event, a) {
+                var scrollPos = a;
                 if (elementTop < windowHeight) {
                     var percent = (scrollPos) / (elementHeight) * 100;
                 } else {
@@ -201,8 +206,10 @@
                         )
                     }
                 }
+
             });
         };
+
 
         ///////////////////////////////////////////////////////
         /* FUNCTION WOW.JS MAISON */
@@ -244,8 +251,9 @@
 
         function woowScroll(element, elementPosition, paramToggle) {
             var verifScroll = false;
-            $(window).scroll(function () {
-                var scrollPosition = $(window).scrollTop();
+
+            $(window).on('window-scroll', function (event, a) {
+                var scrollPosition = a;
                 if (scrollPosition > 1 && verifScroll === false) {
                     verifScroll = true;
                     element.addClass("masked");
@@ -257,9 +265,9 @@
                         element.addClass("masked");
                     }
                 }
+
             });
         };
-
         ///////////////////////////////////////////////////////
         /* MODAL APRES FORMULAIRE */
         ///////////////////////////////////////////////////////

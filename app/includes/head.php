@@ -25,6 +25,7 @@
   <!-- CSS  -->
   <!-- build:css(app) css/style.min.css -->
   <link href="css/app.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link type="text/css" href="../node_modules/overlayscrollbars/css/OverlayScrollbars.css" rel="stylesheet" />
   <!-- endbuild -->
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>

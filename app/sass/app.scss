@@ -83,6 +83,24 @@ $link-hover-decoration:none;
     }
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.os-theme-dark>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
+    background: rgba($color: $noir, $alpha: 0.4) !important;
+
+    &.menuOpen {
+        opacity: 0 !important;
+        pointer-events: none;
+    }
+
+    @media screen and (max-width:$screen-md) {
+        opacity: 0 !important;
+        pointer-events: none;
+    }
+}
+
 /*************************************************
 // BASE
 *************************************************/
@@ -126,7 +144,15 @@ body {
 
 #wrapper {
     max-width: 100vw;
-    overflow: hidden;
+    height: 100%;
+}
+
+#section-top {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 1;
+    height: 500vh;
 }
 
 button,
@@ -275,18 +301,19 @@ br:not(.keep) {
 @import 'pages/_contact';
 @import 'pages/_legals';
 @import 'pages/_erreur404';
-@import 'pages/_mag';
 
 // Components
 @import 'components/_cookies';
 @import 'components/_formulaire';
-@import 'components/_icons';
-@import 'components/_form-comment';
-@import 'components/_form-sort';
-@import 'components/_actu';
-@import 'components/_article';
-
 
 // Utilities
 @import 'utilities/_fonts';
 @import 'utilities/_animations';
+
+// Magazine
+@import 'magazine/_icons';
+@import 'magazine/_form-sort';
+@import 'magazine/_actu';
+@import 'magazine/_article';
+@import 'magazine/_mag';
+

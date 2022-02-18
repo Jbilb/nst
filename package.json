@@ -24,6 +24,7 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "npm": "^6.4.0",
+    "overlayscrollbars": "^1.13.0",
     "slick-carousel": "^1.8.1"
   }
 }

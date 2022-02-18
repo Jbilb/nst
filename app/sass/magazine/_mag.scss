@@ -1,0 +1,37 @@
+.mag {
+    
+    &_content {
+        @include position(relative,5);
+        padding-top:7rem;
+        padding-bottom:10rem;
+        &_title {
+            margin-bottom:5rem;
+            font-size:4.5rem;
+            @extend %font-bold;
+            color:$noir;
+            &_sub {
+                display:block;
+                margin-top:10px;
+                font-size:50%;
+                color:$gris;
+                @extend %font-bold;
+            }
+        }
+        &:after {
+            @include position(absolute,10,0,0,auto,0);
+            display:block;
+            content:'';
+            background:rgba(0,0,0,.75);
+            transition:all .3s ease-out 0s, height .1s ease-out .3s;
+            height:0;
+            opacity:0;
+        }
+        &.overlay {
+            &:after {
+                height:100%;
+                opacity:1;
+                transition:opacity .3s ease-out 0s;
+            }
+        }
+    }
+}
