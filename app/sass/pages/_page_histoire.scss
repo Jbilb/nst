@@ -1,7 +1,12 @@
 .page_histoire {
     .p-header {
+
         &_bg {
-            background-image: url('../img/header/');
+            background-image: url('../img/header/bg-don-camillo-histoire.jpg');
+
+            @media screen and (max-width:$screen-md) {
+                background-image: url('../img/header/mobile/bg-don-camillo-histoire.jpg');
+            }
         }
     }
 }

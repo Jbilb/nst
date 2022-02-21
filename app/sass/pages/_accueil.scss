@@ -1,5 +1,41 @@
 .accueil {
-    &_bg {
-        background-image: url('../img/header/');
+
+    .p-header {
+
+        &_bg {
+            background-image: url('../img/header/bg-don-camillo-index.jpg');
+
+            @media screen and (max-width:$screen-md) {
+                background-image: url('../img/header/mobile/bg-don-camillo-index.jpg');
+            }
+        }
+    }
+
+    .p-nav {
+
+        &.masked {
+            .p-nav {
+                &_content {
+
+                    &_logo {
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: all .3s ease;
+                    }
+                }
+            }
+        }
+
+        &.ouvert {
+            .p-nav {
+                &_content {
+
+                    &_logo {
+                        opacity: 1;
+                        transition: all .3s ease;
+                    }
+                }
+            }
+        }
     }
 }

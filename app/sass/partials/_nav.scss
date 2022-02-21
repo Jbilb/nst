@@ -5,6 +5,10 @@
     z-index: 104;
     width: 100%;
     background-color: $beige;
+    opacity: 0;
+    transform: translateY(-150%);
+    transition: all .3s ease;
+    animation: navbar .8s ease forwards .3s;
 
     &_content {
         display: flex;
@@ -13,23 +17,58 @@
         height: 10rem;
         transition: all .3s ease;
 
+        @media screen and (max-width:$screen-md) {
+            height: 90px;
+        }
+
         &_logo {
             display: block;
             width: 23rem;
 
+            @media screen and (max-width:$screen-md) {
+                width: 46.666vw;
+            }
+
             svg {
                 width: 100%;
                 height: auto;
+
+                #Groupe_3830 {
+                    path {
+                        fill: $vert;
+                        transition: all .3s ease;
+                    }
+                }
+
+                #Groupe_3831 {
+                    path {
+                        fill: $rose;
+                        transition: all .3s ease;
+                    }
+                }
             }
         }
 
         &_picto {
             display: block;
-            width: 5rem;
+            width: 14.8vw;
+            margin-right: 3vw;
+            opacity: 1;
+            transition: all .3s ease;
+
+            @media screen and (min-width:$screen-md) {
+                display: none;
+            }
 
             img {
                 width: 100%;
                 height: auto;
+            }
+        }
+
+        &_bouton {
+            @media screen and (max-width:$screen-md) {
+                display: none;
             }
         }
 
@@ -39,8 +78,13 @@
             text-transform: uppercase;
             font-weight: $semi-bold;
             color: $vert3;
+            opacity: 1;
             margin-right: 2.5vw;
             transition: all .3s ease;
+
+            @media screen and (max-width:$screen-md) {
+                display: none;
+            }
 
             &:hover {
                 color: $rose;
@@ -74,18 +118,17 @@
                     width: 100%;
                     height: 2px;
                     border-radius: 2px;
-                    background: $vert3;
                     position: relative;
                     transition: all .3s ease;
 
                     &:nth-child(1) {
+                        background: $vert3;
                         top: 0;
                         transform: translateX(-50%)translateY(0)rotate(0);
                     }
 
                     &:nth-child(2) {
                         transform: translateX(-50%)translateY(0)rotate(0);
-                        background: transparent;
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
@@ -104,6 +147,7 @@
                     }
 
                     &:nth-child(3) {
+                        background: $vert3;
                         bottom: 0;
                         transform: translateX(-50%)translateY(0)rotate(0);
                     }
@@ -120,41 +164,10 @@
 
                                 &::after,
                                 &::before {
-                                    width: 50%;
+                                    width: calc(50% - 10px);
                                     transition: all .3s ease;
                                 }
                             }
-                        }
-                    }
-                }
-            }
-
-            &.ouvert {
-
-                .content {
-
-                    .barre {
-                        background: $blanc;
-                        transition: all .1s ease .1s;
-
-                        &:nth-child(1) {
-                            background: $vert3;
-                            top: calc(50% - 1px);
-                            transform: translateX(-50%)translateY(0)rotate(-45deg);
-                            transition: top .3s ease, transform .3s ease .2s;
-                        }
-
-                        &:nth-child(2) {
-                            left: 50%;
-                            opacity: 0;
-                            transition: left .3s ease, opacity .3s ease .2s;
-                        }
-
-                        &:nth-child(3) {
-                            background: $vert3;
-                            bottom: calc(50% - 1px);
-                            transform: translateX(-50%)translateY(0)rotate(45deg);
-                            transition: top .3s ease, transform .3s ease .2s;
                         }
                     }
                 }
@@ -164,6 +177,138 @@
         &_right {
             display: flex;
             align-items: center;
+        }
+    }
+
+    &.masked:not(.ouvert) {
+        background-color: transparent;
+        transition: all .3s ease;
+
+        .p-nav {
+            &_content {
+
+                &_logo {
+
+                    svg {
+
+                        #Groupe_3830 {
+                            path {
+                                fill: $blanc;
+                                transition: all .3s ease;
+                            }
+                        }
+
+                        #Groupe_3831 {
+                            path {
+                                fill: $blanc;
+                                transition: all .3s ease;
+                            }
+                        }
+                    }
+                }
+
+                &_link {
+                    color: $blanc;
+                    transition: color .3s ease;
+                }
+
+                &_burger {
+
+                    .content {
+
+                        .barre {
+
+                            &:nth-child(1),
+                            &:nth-child(3) {
+                                background: $blanc;
+                                transition: all .3s ease;
+                            }
+
+                            &:nth-child(2) {
+
+                                &::after,
+                                &::before {
+                                    background: $blanc;
+                                    transition: all .3s ease;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.ouvert {
+        background-color: transparent;
+        transition: all .3s ease;
+
+        .p-nav {
+            &_content {
+
+                &_logo {
+
+                    svg {
+
+                        #Groupe_3830 {
+                            path {
+                                fill: $blanc;
+                                transition: all .3s ease;
+                            }
+                        }
+
+                        #Groupe_3831 {
+                            path {
+                                fill: $rose;
+                                transition: all .3s ease;
+                            }
+                        }
+                    }
+                }
+
+                &_link,
+                &_picto {
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity .3s ease, color .1s linear .3s;
+                }
+
+                &_burger {
+
+                    .content {
+
+                        .barre {
+
+                            &:nth-child(1) {
+                                background: $blanc;
+                                top: calc(50% - 1px);
+                                transform: translateX(-50%)translateY(0)rotate(-45deg);
+                                transition: top .3s ease, transform .3s ease .2s;
+                            }
+
+                            &:nth-child(2) {
+                                left: 50%;
+                                transform: translateX(-50%)translateY(0)rotate(45deg);
+                                transition: left .3s ease, transform .3s ease .2s;
+
+                                &::after,
+                                &::before {
+                                    width: calc(50% - 5px);
+                                    background: $blanc;
+                                    transition: all .3s ease;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                background: transparent;
+                                bottom: calc(50% - 1px);
+                                transform: translateX(-50%)translateY(0)rotate(45deg);
+                                transition: top .3s ease, transform .3s ease .2s;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

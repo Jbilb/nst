@@ -58,9 +58,9 @@
             var headerHeightBy2 = headerHeight - (headerHeight - 100);
 
             if (scrollPosition > headerHeightBy2) {
-                $('.p-btnMenu').removeClass('masked');
+                $('.p-nav').removeClass('masked');
             } else {
-                $('.p-btnMenu').addClass('masked');
+                $('.p-nav').addClass('masked');
             }
         }
 
@@ -86,15 +86,18 @@
                 var elemNav = $('.p-nav');
                 var elemMenu = $('.p-menu');
                 var elemHtml = $('html');
+                var elemBarreScroll = $('.os-scrollbar-handle');
                 if (elemNav.hasClass('ouvert')) {
                     elemNav.removeClass('ouvert');
                     $(this).removeClass('ouvert');
                     elemMenu.removeClass('ouvert');
+                    elemBarreScroll.removeClass('menuOpen');
                     elemHtml.removeClass('noscroll');
                 } else {
                     $(this).addClass('ouvert');
                     elemNav.addClass('ouvert');
                     elemMenu.addClass('ouvert');
+                    elemBarreScroll.addClass('menuOpen');
                     elemHtml.addClass('noscroll');
                 }
             });
