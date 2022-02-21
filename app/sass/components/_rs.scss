@@ -1,0 +1,27 @@
+.c-rs {
+    display: flex;
+    align-items: center;
+
+    &_item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 3rem;
+        color: $blanc;
+        transition: all .3s ease;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            @include icon(2rem);
+        }
+
+        &:hover {
+            color: $rose;
+            transition: all .3s ease;
+        }
+    }
+}

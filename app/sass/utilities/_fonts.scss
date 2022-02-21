@@ -60,23 +60,23 @@ $black : 900;
 
 
 .regular {
-    font-weight: $regular;
+    font-weight: $regular !important;
 }
 
 .medium {
-    font-weight: $medium;
+    font-weight: $medium !important;
 }
 
 .semi-bold {
-    font-weight: $semi-bold;
+    font-weight: $semi-bold !important;
 }
 
 .bold {
-    font-weight: $bold;
+    font-weight: $bold !important;
 }
 
 .black {
-    font-weight: $black;
+    font-weight: $black !important;
 }
 
 %font {

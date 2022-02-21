@@ -47,14 +47,6 @@
         z-index: 2;
     }
 
-    &.float-right {
-        float: right;
-
-        @media screen and (max-width:$screen-md) {
-            float: none;
-        }
-    }
-
     &:hover {
 
         @media screen and (min-width:$screen-md) {
@@ -68,6 +60,30 @@
 
             color: $blanc;
             transition: all .3s ease;
+        }
+    }
+
+    &.float-right {
+        float: right;
+
+        @media screen and (max-width:$screen-md) {
+            float: none;
+        }
+    }
+
+    &.bg0-white-brRose {
+        border: 1px solid $rose;
+
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+
+            @media screen and (min-width:$screen-md) {
+                background-color: transparent;
+                color: $blanc;
+            }
         }
     }
 }

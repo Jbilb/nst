@@ -67,6 +67,9 @@
         }
 
         &_bouton {
+            opacity: 1;
+            transition: all .3s ease;
+
             @media screen and (max-width:$screen-md) {
                 display: none;
             }
@@ -210,6 +213,11 @@
                 &_link {
                     color: $blanc;
                     transition: color .3s ease;
+
+                    &:hover {
+                        color: $rose;
+                        transition: color .3s ease;
+                    }
                 }
 
                 &_burger {
@@ -267,7 +275,8 @@
                 }
 
                 &_link,
-                &_picto {
+                &_picto,
+                &_bouton {
                     opacity: 0;
                     pointer-events: none;
                     transition: opacity .3s ease, color .1s linear .3s;
