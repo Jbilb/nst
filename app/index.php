@@ -8,7 +8,7 @@ $HEADER_subtitle = 'Le frais, le fin, l’italien';
 include 'includes/header.php'; 
 ?>
 
-<section id="section-top" style="height:7000px;">
+<section id="section-top">
 </section>
 
 <?php include 'includes/footer.php'; ?>

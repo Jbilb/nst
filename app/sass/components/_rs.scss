@@ -10,6 +10,10 @@
         color: $blanc;
         transition: all .3s ease;
 
+        @media screen and (max-width:$screen-md) {
+            margin-right: 20px;
+        }
+
         &:last-child {
             margin-right: 0;
         }
@@ -17,6 +21,10 @@
         [class^="icon-"],
         [class*=" icon-"] {
             @include icon(2rem);
+
+            @media screen and (max-width:$screen-md) {
+                @include icon(20px);
+            }
         }
 
         &:hover {

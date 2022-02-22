@@ -86,8 +86,7 @@ $LINK_TITLE_instagram = 'Découvrez toute l\'actualité de Don Camillo sur Insta
 // inclusion datastore
 //*******************************
 
-$DATA_simpleArray = include_once 'datastore/simple_array.data.php';
-$DATA_objectArray = include_once 'datastore/object_array.data.php';
+$DATA_restaurants = include_once 'datastore/restaurants.data.php';
 
 //*******************************
 // SHARING ELEMENTS

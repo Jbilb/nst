@@ -1,3 +1,27 @@
 .p-footer {
-    
+    position: relative;
+    overflow: hidden;
+    padding-top: 5.2vw;
+    padding-bottom: 4.16vw;
+
+    &_top {
+        margin-bottom: 4.5vw;
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 14vw;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &_mid {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
 }

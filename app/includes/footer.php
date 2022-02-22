@@ -1,7 +1,137 @@
-    <footer class="p-footer blanc-bg">
+    <footer class="p-footer vert-bg">
         <div class="container">
             <div class="row">
-
+                <div class="col-xs-12">
+                    <div class="p-footer_top">
+                        <a class="logo" href="<?php echo $NAV_accueil; ?>" title="<?php echo $NAV_TITLE_accueil; ?>">
+                            <img src="img/logos/logo-doncamillo-footer.svg" alt="logo-doncamillo-footer">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-xl-10 col-xl-offset-1">
+                    <div class="p-footer_mid">
+                        <div class="bloc">
+                            <h2 class="h4 center rose bloc_title">
+                                Découvrez <br>Don Camillo
+                            </h2>
+                            <div class="bloc_trait center">
+                                <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
+                            </div>
+                            <ul class="bloc_nav">
+                                <li>
+                                    <a class="paragr item" href="<?php echo $NAV_page_histoire; ?>"
+                                        title="<?php echo $NAV_TITLE_page_histoire; ?>">Une
+                                        histoire de famille</a>
+                                </li>
+                                <li>
+                                    <a class="paragr item" href="<?php echo $NAV_page_rejoindre; ?>"
+                                        title="<?php echo $NAV_TITLE_page_rejoindre; ?>">
+                                        Rejoindre la famille</a>
+                                </li>
+                            </ul>
+                            <div class="bloc_bouton">
+                                <a href="<?php echo $NAV_mag; ?>" title="<?php echo $NAV_TITLE_mag; ?>"
+                                    class="bouton bg0-white-brRose">
+                                    <span>le magazine</span>
+                                </a>
+                            </div>
+                            <div class="bloc_last">
+                                <a class="paragr item semi-bold" href="<?php echo $NAV_contact; ?>"
+                                    title="<?php echo $NAV_TITLE_contact; ?>">Nous
+                                    contacter</a>
+                            </div>
+                        </div>
+                        <div class="bloc">
+                            <h2 class="h4 center rose bloc_title">
+                                Réservez <br>votre table !
+                            </h2>
+                            <div class="bloc_trait center">
+                                <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
+                            </div>
+                            <ul class="bloc_nav">
+                                <li>
+                                    <a class="item" href="<?php echo $NAV_page_carte; ?>"
+                                        title="<?php echo $NAV_TITLE_page_carte; ?>">La carte</a>
+                                </li>
+                                <li>
+                                    <button class="item">
+                                        Nos restaurants
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="bloc_bouton">
+                                <button class="bouton bg0-white-brRose">
+                                    <span>Réservation</span>
+                                </button>
+                            </div>
+                            <div class="bloc_last">
+                                <?php include "includes/rs.php"; ?>
+                            </div>
+                        </div>
+                        <div class="bloc">
+                            <h2 class="h4 center rose bloc_title">
+                                <?php $city = "pamiers"; ?>
+                                Don Camillo<br> <?=$restaurants[$city]['name'];?>
+                            </h2>
+                            <div class="bloc_trait center">
+                                <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
+                            </div>
+                            <div class="bloc_horaires">
+                                <p class="blanc center">À votre service <br><?=$restaurants[$city]['schedule'];?>
+                                </p>
+                            </div>
+                            <div class="bloc_horaires">
+                                <p class="blanc center">
+                                    <?=$restaurants[$city]['adress'];?><br>
+                                    <?=$restaurants[$city]['cp'];?> <?=$restaurants[$city]['city'];?><br>
+                                </p>
+                            </div>
+                            <div class="bloc_telephone">
+                                <p class="blanc center">
+                                    <a href="tel:<?=$restaurants[$city]['phone'];?>"
+                                        class="no-link-desktop paragr center blanc bold"><?=$restaurants[$city]['phone'];?></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bloc">
+                            <h2 class="h4 center rose bloc_title">
+                                <?php $city = "foix"; ?>
+                                Don Camillo<br> <?=$restaurants[$city]['name'];?>
+                            </h2>
+                            <div class="bloc_trait center">
+                                <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
+                            </div>
+                            <div class="bloc_horaires">
+                                <p class="blanc center">À votre service <br><?=$restaurants[$city]['schedule'];?>
+                                </p>
+                            </div>
+                            <div class="bloc_horaires">
+                                <p class="blanc center">
+                                    <?=$restaurants[$city]['adress'];?><br>
+                                    <?=$restaurants[$city]['cp'];?> <?=$restaurants[$city]['city'];?><br>
+                                </p>
+                            </div>
+                            <div class="bloc_telephone">
+                                <p class="blanc center">
+                                    <a href="tel:<?=$restaurants[$city]['phone'];?>"
+                                        class="no-link-desktop paragr center blanc bold"><?=$restaurants[$city]['phone'];?></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="p-footer_bot">
+                        <p class="center paragr-small">Copyright 2021 Don Camillo - Tous droits réservés -<a> Site
+                                par
+                                melting.k</a> -
+                            <a>Mentions légales</a> - <a>Allergènes</a></p>
+                        <p class="center paragr-small">Pour votre santé, mangez au moins cinq fruits et légumes
+                            par jour.
+                            www.mangerbouger.fr - L’abus d’alcool est dangereux pour la santé, à consommer avec
+                            modération.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

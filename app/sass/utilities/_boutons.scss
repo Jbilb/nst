@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 20rem;
+    min-width: 20rem;
     padding-right: 3rem;
     padding-left: 3rem;
     height: 5rem;
@@ -24,8 +24,11 @@
 
     @media screen and (max-width:$screen-md) {
         height: 50px;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 30px;
+        min-width: 200px;
+        font-size: 17px;
+        max-width: 100%;
+        padding-right: 30px;
     }
 
     &::after {

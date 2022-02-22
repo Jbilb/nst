@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-md-5 col-md-push-6">
-                        <div class="content">
+                        <div class="content-nav">
                             <div class="p-menu_title">
                                 RÉSERVEZ VOTRE TABLE
                             </div>
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-5 col-md-pull-5">
-                        <div class="content">
+                        <div class="content-nav">
                             <div class="p-menu_title">
                                 Découvrez Don Camillo
                             </div>
@@ -52,7 +52,8 @@
                                 </li>
                             </ul>
                             <div class="p-menu_bouton">
-                                <a href="" class="bouton bg0-white-brRose">
+                                <a href="<?php echo $NAV_mag; ?>" title="<?php echo $NAV_TITLE_mag; ?>"
+                                    class="bouton bg0-white-brRose">
                                     <span>le magazine</span>
                                 </a>
                             </div>
@@ -77,11 +78,11 @@
                 </div>
             </div>
         </div>
-        <span class="forme-olivier">
-            <img src="img/svg/romarin-3-vert.svg" alt="Romarin Doncamillo">
-        </span>
-        <span class="forme-pates">
-            <img src="img/svg/assiette-2-vert.svg" alt="Pâtes Doncamillo">
-        </span>
     </div>
+    <span class="forme-olivier">
+        <img src="img/svg/romarin-3-vert.svg" alt="Romarin Doncamillo">
+    </span>
+    <span class="forme-pates">
+        <img src="img/svg/assiette-2-vert.svg" alt="Pâtes Doncamillo">
+    </span>
 </div>
