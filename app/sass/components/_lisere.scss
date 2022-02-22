@@ -1,0 +1,79 @@
+.c-lisere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border: 1px solid $rose;
+
+    &::after,
+    &::before {
+        display: block;
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: $rose;
+        position: absolute;
+        top: 0;
+    }
+
+    &::after {
+        right: 3.5rem;
+    }
+
+    &::before {
+        left: 3.5rem;
+    }
+
+    &_top,
+    &_bot {
+        position: absolute;
+        width: 100%;
+        height: 3rem;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .trait {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $rose;
+        }
+
+        &::after,
+        &::before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%)rotate(45deg);
+            display: block;
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            border: 1px solid $rose;
+        }
+
+        &::after {
+            right: 2.5rem;
+        }
+
+        &::before {
+            left: 2.5rem;
+        }
+    }
+
+    &_top {
+        top: 2rem;
+    }
+
+    &_bot {
+        bottom: 2rem;
+    }
+
+    &.no-border {
+        border: none;
+    }
+}

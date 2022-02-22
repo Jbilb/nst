@@ -73,14 +73,17 @@ $NAV_TITLE_legals = 'Mentions légales de www.doncamillo-restaurants.fr';
 // url externes
 //*******************************
 
-$LINK_facebook = 'https://www.facebook.com/';
+$LINK_facebook = 'ATTENTE LIEN';
 $LINK_TITLE_facebook = 'Découvrez toute l\'actualité de Don Camillo sur Facebook';
 
-$LINK_linkedin = 'https://www.linkedin.com/';
+$LINK_linkedin = 'ATTENTE LIEN';
 $LINK_TITLE_linkedin = 'Découvrez toute l\'actualité de Don Camillo sur Linkedin ';
 
-$LINK_instagram = 'https://www.instagram.com/';
+$LINK_instagram = 'ATTENTE LIEN';
 $LINK_TITLE_instagram = 'Découvrez toute l\'actualité de Don Camillo sur Instagram';
+
+$LINK_allergenes = 'ATTENTE LIEN';
+$LINK_TITLE_allergenes = 'Allergènes Don Camillo';
 
 //*******************************
 // inclusion datastore

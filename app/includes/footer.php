@@ -1,4 +1,5 @@
     <footer class="p-footer vert-bg">
+        <?php $lisere_border = false; include "includes/lisere.php"; ?>
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
@@ -50,11 +51,11 @@
                             </div>
                             <ul class="bloc_nav">
                                 <li>
-                                    <a class="item" href="<?php echo $NAV_page_carte; ?>"
+                                    <a class="paragr item" href="<?php echo $NAV_page_carte; ?>"
                                         title="<?php echo $NAV_TITLE_page_carte; ?>">La carte</a>
                                 </li>
                                 <li>
-                                    <button class="item">
+                                    <button class="paragr item">
                                         Nos restaurants
                                     </button>
                                 </li>
@@ -80,7 +81,7 @@
                                 <p class="blanc center">À votre service <br><?=$restaurants[$city]['schedule'];?>
                                 </p>
                             </div>
-                            <div class="bloc_horaires">
+                            <div class="bloc_adresses">
                                 <p class="blanc center">
                                     <?=$restaurants[$city]['adress'];?><br>
                                     <?=$restaurants[$city]['cp'];?> <?=$restaurants[$city]['city'];?><br>
@@ -102,10 +103,11 @@
                                 <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
                             </div>
                             <div class="bloc_horaires">
-                                <p class="blanc center">À votre service <br><?=$restaurants[$city]['schedule'];?>
+                                <p class="blanc center">À votre service <br>tous les jours
+                                    <br><?=$restaurants[$city]['schedule'];?>
                                 </p>
                             </div>
-                            <div class="bloc_horaires">
+                            <div class="bloc_adresses">
                                 <p class="blanc center">
                                     <?=$restaurants[$city]['adress'];?><br>
                                     <?=$restaurants[$city]['cp'];?> <?=$restaurants[$city]['city'];?><br>
@@ -122,10 +124,14 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="p-footer_bot">
-                        <p class="center paragr-small">Copyright 2021 Don Camillo - Tous droits réservés -<a> Site
+                        <p class="center paragr-small">Copyright 2021 Don Camillo - Tous droits réservés - <a
+                                target="_blank" href="https://www.melting-k.fr/"
+                                title="Agence de communication globale"> Site
                                 par
                                 melting.k</a> -
-                            <a>Mentions légales</a> - <a>Allergènes</a></p>
+                            <a href="<?php echo $NAV_legals; ?>" title="<?php echo $NAV_TITLE_legals; ?>">Mentions
+                                légales</a> - <a href="<?php echo $LINK_allergenes; ?>"
+                                title="<?php echo $LINK_TITLE_allergenes; ?>">Allergènes</a></p>
                         <p class="center paragr-small">Pour votre santé, mangez au moins cinq fruits et légumes
                             par jour.
                             www.mangerbouger.fr - L’abus d’alcool est dangereux pour la santé, à consommer avec
@@ -134,6 +140,9 @@
                 </div>
             </div>
         </div>
+        <span class="p-footer_forme">
+            <img src="img/svg/olives-vert.svg" alt="olives-vert">
+        </span>
     </footer>
     <div class="u-banner-cookies">
         <div class="u-banner-cookies_content">
