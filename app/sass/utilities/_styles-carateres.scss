@@ -1,6 +1,7 @@
 /*************************************************
 // STYLES DE CARATERES
 *************************************************/
+$pMaxWith : var(--pMaxWith);
 
 .paragr,
 p {
@@ -32,6 +33,18 @@ p {
 
         @media(max-width:$screen-xss) {
             font-size: 13px;
+        }
+    }
+
+    &.v-maxWidth {
+        max-width: $pMaxWith;
+
+        @media screen and (max-width:$screen-md) {
+            max-width: 100%;
+        }
+
+        &.right{
+            margin-left: auto;
         }
     }
 }
@@ -83,7 +96,7 @@ p {
     margin: 0;
     font-family: $font;
     font-weight: $semi-bold;
-    @include fluid-text(30px, 40px, 1.25, 991px, 1920px);
+    @include fluid-text(28px, 40px, 1.25, 991px, 1920px);
 
     @media screen and (max-width:$screen-md) {
         font-size: 30px;
@@ -105,7 +118,7 @@ p {
     @include fluid-text(22px, 30px, 1.1, 991px, 1920px);
 
     @media screen and (max-width:$screen-md) {
-        font-size: 22px;
+        font-size: 23px;
 
         br {
             display: none;
@@ -138,8 +151,8 @@ p {
 
 .h160 {
     margin: 0;
-    font-family: $font-rexton;
-    font-weight: $regular;
+    font-family: $font;
+    font-weight: $bold;
     @include fluid-text(65px, 160px, 0.9, 991px, 1920px);
 
     @media screen and (max-width:$screen-md) {
@@ -188,5 +201,55 @@ $traitColor : var(--traitColor);
         background-color: $traitColor;
         transform: rotate(-45deg);
         transform-origin: center center;
+    }
+
+    &.v-margeTitre {
+        display: flex;
+        margin-top: 2.5vw;
+        margin-bottom: 2vw;
+
+        @media screen and (max-width:$screen-md) {
+            margin-top: 45px;
+            margin-bottom: 45px;
+        }
+    }
+
+    &.v-center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.v-right {
+        margin-left: auto;
+    }
+}
+
+.s-pastille {
+    position: relative;
+    display: inline-block;
+    width: 18.7rem;
+    z-index: 2;
+
+    @media screen and (max-width:$screen-md) {
+        width: 150px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cercle {
+        width: 100%;
+        display: block;
+        transform: rotate(0);
+        animation: pastille 8s linear infinite;
+    }
+
+    .icons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
     }
 }

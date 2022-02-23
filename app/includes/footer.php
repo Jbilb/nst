@@ -72,19 +72,20 @@
                         <div class="bloc">
                             <h2 class="h4 center rose bloc_title">
                                 <?php $city = "pamiers"; ?>
-                                Don Camillo<br> <?=$restaurants[$city]['name'];?>
+                                Don Camillo<br class="keep"> <?=$restaurants[$city]['name'];?>
                             </h2>
                             <div class="bloc_trait center">
                                 <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
                             </div>
                             <div class="bloc_horaires">
-                                <p class="blanc center">À votre service <br><?=$restaurants[$city]['schedule'];?>
+                                <p class="blanc center">À votre service <br
+                                        class="keep"><?=$restaurants[$city]['schedule'];?>
                                 </p>
                             </div>
                             <div class="bloc_adresses">
                                 <p class="blanc center">
-                                    <?=$restaurants[$city]['adress'];?><br>
-                                    <?=$restaurants[$city]['cp'];?> <?=$restaurants[$city]['city'];?><br>
+                                    <?=$restaurants[$city]['adress'];?><br class="keep">
+                                    <?=$restaurants[$city]['cp'];?> <?=$restaurants[$city]['city'];?>
                                 </p>
                             </div>
                             <div class="bloc_telephone">
@@ -97,20 +98,20 @@
                         <div class="bloc">
                             <h2 class="h4 center rose bloc_title">
                                 <?php $city = "foix"; ?>
-                                Don Camillo<br> <?=$restaurants[$city]['name'];?>
+                                Don Camillo<br class="keep"> <?=$restaurants[$city]['name'];?>
                             </h2>
                             <div class="bloc_trait center">
                                 <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
                             </div>
                             <div class="bloc_horaires">
-                                <p class="blanc center">À votre service <br>tous les jours
-                                    <br><?=$restaurants[$city]['schedule'];?>
+                                <p class="blanc center">À votre service <br class="keep">tous les jours
+                                    <br class="keep"><?=$restaurants[$city]['schedule'];?>
                                 </p>
                             </div>
                             <div class="bloc_adresses">
                                 <p class="blanc center">
-                                    <?=$restaurants[$city]['adress'];?><br>
-                                    <?=$restaurants[$city]['cp'];?> <?=$restaurants[$city]['city'];?><br>
+                                    <?=$restaurants[$city]['adress'];?><br class="keep">
+                                    <?=$restaurants[$city]['cp'];?> <?=$restaurants[$city]['city'];?>
                                 </p>
                             </div>
                             <div class="bloc_telephone">

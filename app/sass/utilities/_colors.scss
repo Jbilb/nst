@@ -38,6 +38,15 @@ $beige-fonce : #CBBCAD;
     }
 }
 
+.vert3 {
+    color: $vert3 !important;
+
+    &-bg {
+        background: $vert3;
+        color: inherit !important;
+    }
+}
+
 .rose {
     color: $rose !important;
 

@@ -7,7 +7,7 @@
     background-color: $beige;
     overflow: hidden;
 
-    @media screen and (max-width:$screen-md) {
+    @media screen and (max-width:$screen-sm) {
         height: var(--heightJs);
         min-height: 70vh;
     }

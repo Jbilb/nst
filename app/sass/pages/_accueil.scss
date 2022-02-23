@@ -38,4 +38,340 @@
             }
         }
     }
+
+    .index-intro {
+        position: relative;
+        overflow: hidden;
+        padding-top: 16.66vw;
+        padding-bottom: 59.89vw;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../img/content/index/bg-intro-index.jpg');
+
+        @media screen and (max-width:$screen-sm) {
+            background-image: url('../img/content/index/bg-intro-index-mobile.jpg');
+            padding-top: 260px;
+            padding-bottom: 890px;
+        }
+
+        .illustration-olive {
+            position: absolute;
+            top: -5vw;
+            right: -8vw;
+            width: 34.6vw;
+
+            @media screen and (max-width:$screen-md) {
+                width: 300px;
+                right: -50px;
+                top: -50px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .index-doubleImg {
+        position: relative;
+
+        .row {
+            @media screen and (min-width:$screen-sm) {
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+
+        .img {
+            position: relative;
+            width: 100%;
+
+            &.img1 {
+                height: 58.22vw;
+                top: -8.33vw;
+
+                @media screen and (max-width:$screen-sm) {
+                    width: 69.33vw;
+                    height: 103vw;
+                    top: -36vw;
+                    left: -30px;
+                }
+            }
+
+            &.img2 {
+                height: 47.13vw;
+
+                @media screen and (max-width:$screen-sm) {
+                    width: 69.33vw;
+                    height: 101vw;
+                    margin-left: auto;
+                    right: -30px;
+                }
+            }
+        }
+
+        .s-pastille {
+            position: absolute;
+            top: -9rem;
+            right: -8rem;
+
+            @media screen and (max-width:$screen-sm) {
+                top: -86px;
+                right: auto;
+                left: 30px;
+            }
+        }
+    }
+
+    .index-bloc {
+        position: relative;
+
+        &::after {
+            display: block;
+            content: '';
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+
+            @media screen and (max-width:$screen-md) {
+                height: calc(154vw / 2) !important;
+            }
+        }
+
+        [class^="illustration-"],
+        [class*=" illustration-"] {
+            position: absolute;
+
+            &.illustration-pizza {
+                top: -15vw;
+                right: -13vw;
+                width: 45vw;
+
+                @media screen and (max-width:$screen-md) {
+                    width: 400px;
+                    right: -50px;
+                    top: -50px;
+                }
+            }
+
+            &.illustration-pates {
+                top: 6vw;
+                left: -10.4vw;
+                width: 46vw;
+
+                @media screen and (max-width:$screen-md) {
+                    width: 400px;
+                    right: -50px;
+                    top: -50px;
+                }
+            }
+
+            &.illustration-tomate {
+                top: 2vw;
+                right: -10.4vw;
+                width: 31.5vw;
+
+                @media screen and (max-width:$screen-md) {
+                    width: 250px;
+                    right: auto;
+                    left: -50px;
+                    top: -50px;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .content-bot {
+            position: relative;
+            margin-top: 4.16vw;
+            z-index: 1;
+        }
+
+        .img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 69.53vw;
+            height: 100%;
+
+            @media screen and (max-width:$screen-md) {
+                position: relative;
+                width: calc(100vw - 30px);
+                height: 154vw;
+                margin-top: 115px;
+            }
+
+            &.posi-left {
+                left: 0;
+            }
+
+            &.posi-right {
+                right: 0;
+
+                @media screen and (max-width:$screen-md) {
+                    margin-left: auto;
+                }
+            }
+        }
+
+        &#nostraFamiglia {
+            padding-top: 24.21vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-top: 350px;
+            }
+
+            .content-bot {
+                padding-bottom: 29.89vw;
+
+                @media screen and (max-width:$screen-md) {
+                    padding-bottom: 0;
+                }
+            }
+
+            &::after {
+                background-color: $rose;
+                height: 21vw;
+
+                @media screen and (max-width:$screen-md) {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        &#pastaPizza {
+            padding-top: 22vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-top: 350px;
+            }
+
+            .content-bot {
+                padding-bottom: 29.68vw;
+
+                @media screen and (max-width:$screen-md) {
+                    padding-bottom: 0;
+                }
+            }
+
+            &::after {
+                background-color: $beige;
+                height: 21.6vw;
+
+                @media screen and (max-width:$screen-md) {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        &#fattoInCase {
+            padding-top: 20.20vw;
+            padding-bottom: 49.47vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-top: 350px;
+                padding-bottom: 415px;
+            }
+
+            .content-bot {
+                padding-bottom: 26.3vw;
+
+                @media screen and (max-width:$screen-md) {
+                    padding-bottom: 0;
+                }
+            }
+
+            .img {
+                @media screen and (max-width:$screen-md) {
+                    img {
+                        object-position: left;
+                    }
+                }
+            }
+
+            .bg-img {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 65.1vw;
+                z-index: 0;
+
+                @media screen and (max-width:$screen-md) {
+                    height: 705px;
+                }
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .index-distributeur {
+        position: relative;
+        overflow: hidden;
+        padding-top: 10.6vw;
+        padding-bottom: 10.6vw;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 350px;
+            padding-bottom: 0;
+        }
+
+        &::after {
+            display: block;
+            content: '';
+            height: 100%;
+            width: 42.44vw;
+            background-color: $rose;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0;
+
+            @media screen and (max-width:$screen-md) {
+                display: none;
+            }
+        }
+
+        .illustration{
+            position: absolute;
+            top: -9.375vw;
+            left: -13vw;
+            width: 33.8vw;
+
+            @media screen and (max-width:$screen-md) {
+                top: -140px;
+                left: -170px;
+                width: 430px;
+            }
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .img {
+            width: 100%;
+            height: 38.8vw;
+
+            @media screen and (max-width:$screen-md) {
+                width: calc(100vw);
+                position: relative;
+                left: -30px;
+                height: 384px;
+                margin-top: 100px;
+            }
+        }
+    }
 }

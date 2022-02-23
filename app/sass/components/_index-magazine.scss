@@ -1,0 +1,104 @@
+.index-magazine {
+    position: relative;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 11.9vw;
+
+    @media screen and (max-width:$screen-md) {
+        padding-top: 0;
+        padding-bottom: 90px;
+    }
+
+    &_title {
+        margin-bottom: 5.2vw;
+
+        @media screen and (max-width:$screen-md) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &_content {
+        width: 100%;
+        display: flex;
+        height: 53rem;
+        margin-bottom: 5.4vw;
+
+        @media screen and (max-width:$screen-md) {
+            flex-direction: column-reverse;
+            margin-bottom: 60px;
+            height: auto;
+        }
+
+        &_text,
+        &_img {
+            width: 50%;
+
+            @media screen and (max-width:$screen-md) {
+                width: 100%;
+            }
+        }
+
+        &_img {
+            height: 100%;
+
+            @media screen and (max-width:$screen-md) {
+                height: 76vw;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &_text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 5.7vw;
+            padding-right: 5.7vw;
+            background-color: $rose;
+            transition: all .3s ease;
+
+            @media screen and (max-width:$screen-md) {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .date {
+                margin-bottom: 1.8vw;
+
+                @media screen and (max-width:$screen-md) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .date,
+            .title {
+                color: $vert;
+                transition: all .3s ease;
+            }
+        }
+
+        &:hover {
+            .index-magazine {
+                &_content {
+                    &_text {
+                        background-color: $vert;
+                        transition: all .3s ease;
+
+                        .date,
+                        .title {
+                            color: $rose;
+                            transition: all .3s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

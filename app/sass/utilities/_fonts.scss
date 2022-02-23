@@ -58,6 +58,14 @@ $bold : 700;
 
 $black : 900;
 
+.font {
+    font-family: $font !important;
+}
+
+.font-rexton {
+    font-family: $font-rexton !important;
+}
+
 
 .regular {
     font-weight: $regular !important;

@@ -21,10 +21,18 @@
 
     &::after {
         right: 3.5rem;
+
+        @media screen and (max-width:$screen-md) {
+            right: 25px;
+        }
     }
 
     &::before {
         left: 3.5rem;
+
+        @media screen and (max-width:$screen-md) {
+            left: 25px;
+        }
     }
 
     &_top,
@@ -36,6 +44,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media screen and (max-width:$screen-md) {
+            height: 30px;
+        }
 
         .trait {
             display: block;
@@ -54,23 +66,44 @@
             width: 2rem;
             height: 2rem;
             border: 1px solid $rose;
+
+            @media screen and (max-width:$screen-md) {
+                width: 20px;
+                height: 20px;
+            }
         }
 
         &::after {
             right: 2.5rem;
+
+            @media screen and (max-width:$screen-md) {
+                right: 15px;
+            }
         }
 
         &::before {
             left: 2.5rem;
+
+            @media screen and (max-width:$screen-md) {
+                left: 15px;
+            }
         }
     }
 
     &_top {
         top: 2rem;
+
+        @media screen and (max-width:$screen-md) {
+            top: 20px;
+        }
     }
 
     &_bot {
         bottom: 2rem;
+
+        @media screen and (max-width:$screen-md) {
+            bottom: 20px;
+        }
     }
 
     &.no-border {
