@@ -71,7 +71,8 @@
                                     </a>
                                 </div>
                                 <div class="p-header_titre_trait v-index">
-                                    <div class="s-trait" style="--traitColor: #fff;"><span></span></div>
+                                    <div class="s-trait" style="--traitColor: #fff;">
+                                        <span><?php include "img/svg/tiret.svg";?></span></div>
                                 </div>
                                 <h1 class="blanc uppercase center p-header_titre_h1">
                                     <span class="h1"><?php echo $HEADER_title; ?></span><span
@@ -83,7 +84,9 @@
                                         class="h5"><?php echo $HEADER_subtitle; ?></span>
                                 </h1>
                                 <div class="p-header_titre_trait">
-                                    <div class="s-trait" style="--traitColor: #fff;"><span></span></div>
+                                    <div class="s-trait" style="--traitColor: #fff;">
+                                        <span><?php include "img/svg/tiret.svg";?></span>
+                                    </div>
                                 </div>
                                 </h1>
                                 <?php } ?>

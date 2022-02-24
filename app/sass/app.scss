@@ -40,7 +40,6 @@ $link-hover-decoration:none;
 // BASE
 *************************************************/
 
-
 * {
     padding: 0;
     margin: 0;
@@ -64,7 +63,7 @@ $link-hover-decoration:none;
 
 .container,
 .container-fluid {
-    @media(max-width:$screen-sm) {
+    @media(max-width:$screen-md) {
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -305,6 +304,9 @@ br:not(.keep) {
 @import 'components/_lisere';
 @import 'components/_accelerateurs';
 @import 'components/index-magazine';
+@import 'components/_sliderEtapes';
+@import 'components/_blocText';
+@import 'components/_c-aside';
 
 // Utilities
 @import 'utilities/_fonts';

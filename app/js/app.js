@@ -18,6 +18,7 @@
             scrollPos = $(window).scrollTop();
             add100Vh();
             sliders();
+            changeTextDoTS();
             dropdown();
             smoothScroll();
             menu();
@@ -26,6 +27,7 @@
             parallax();
             inputFile();
             navMasked();
+            collapseBtn();
         });
         $(window).load(function () {
             woow();
@@ -35,7 +37,37 @@
             windowWidth = $(window).width();
             windowHeight = $(window).height();
             add100Vh();
+            sliders();
+            changeTextDoTS();
         });
+
+        ///////////////////////////////////////////////////////
+        /* bouton collapse */
+        ///////////////////////////////////////////////////////
+        function collapseBtn() {
+
+            $('.js-collapse-content').each(function () {
+                $(this).css("display", "none");
+            });
+
+            $('.js-collapse').on('click', function () {
+                var bouton = this;
+                var wrapper = bouton.closest('.js-collapse-wrapper');
+                var blocTextId = $('.js-collapse-content', wrapper);
+
+                $(bouton).toggleClass('open');
+                if ($(this).hasClass('js-collapse-hidden')) {
+                    $(bouton).css("pointer-events", "none");
+                    $(bouton).animate({
+                        opacity: 0,
+                        height: 0,
+                    }, 300);
+                }
+                $(blocTextId).slideToggle(300, function () {});
+                $(wrapper).toggleClass('open');
+                $(blocTextId).toggleClass('open');
+            });
+        }
 
         ///////////////////////////////////////////////////////
         /* Real 100 vh */
@@ -323,19 +355,83 @@
         ///////////////////////////////////////////////////////
 
         function sliders() {
-            var slider = $('.slider'),
+            var slider = $('[slider-etapes]'),
                 settings = {
-                    infinite: true,
-                    arrows: true,
-                    dots: false,
+                    infinite: false,
+                    arrows: false,
+                    adaptiveHeight: true,
+                    dots: true,
                     autoplay: false,
-                    speed: 1000,
-                    fade: false,
+                    speed: 300,
+                    fade: true,
                     draggable: false,
                     swipeToSlide: true,
+                    appendDots: '[dots-etapes]',
                 };
             $(slider).slick(settings);
+
+            if (window.matchMedia("(max-width:993px)").matches) {
+
+                slider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+                    var i = currentSlide + 1;
+                    var container = $('[dots-etapes]');
+                    var positionMobile = container.data("mobile");
+                    var puces = $('[dots-etapes] ul li.slick-active');
+                    var dataPosition = $(puces).data("position");
+                    var translateValue = dataPosition * positionMobile;
+
+                    $(container).css({
+                        "transform": "translate3d(-" + translateValue + "px, 0px, 0px)"
+                    });
+
+                });
+            }
         }
+
+
+        ///////////////////////////////////////////////////////
+        /* CHANGE TEXTE DOTS SLIDER */
+        ///////////////////////////////////////////////////////
+
+        function changeTextDoTS() {
+
+            var count = -1;
+            var container = $('[dots-etapes]');
+            var data_etapes = $('[dots-etapes]').data("etapes");
+            var positionMobile = container.data("mobile");
+
+            if (typeof data_etapes !== 'undefined') {
+                var array_etapes = data_etapes.split(',');
+                var puces = $('[dots-etapes] ul li');
+
+
+                $(puces).each(function () {
+                    count++;
+                    $(this).attr('data-position', count);
+                });
+
+                for (var i = 0; i < puces.length; i++) {
+                    var item = puces[i];
+                    $(item).html(array_etapes[i]);
+                }
+
+                if (window.matchMedia("(max-width:993px)").matches) {
+
+                    console.log(puces);
+                    $(puces).on('click', function (event) {
+                        event.preventDefault();
+                        var dataPosition = $(this).data("position");
+                        var translateValue = dataPosition * positionMobile;
+                        $(container).css({
+                            "transform": "translate3d(-" + translateValue + "px, 0px, 0px)"
+                        });
+                    });
+                }
+
+            }
+
+
+        };
 
         ///////////////////////////////////////////////////////
         /* CREATION SELECT PERSONNALISE (DROPDOWN) */

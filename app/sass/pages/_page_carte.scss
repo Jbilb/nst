@@ -1,7 +1,326 @@
 .page_carte {
     .p-header {
+
         &_bg {
-            background-image: url('../img/header/');
+            background-image: url('../img/header/bg-don-camillo-carte.jpg');
+
+            @media screen and (max-width:$screen-md) {
+                background-image: url('../img/header/mobile/bg-don-camillo-carte.jpg');
+            }
+        }
+    }
+
+    .laCarte {
+        position: relative;
+        padding-top: 14vw;
+        padding-bottom: 1vw;
+        z-index: 2;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 75px;
+            padding-bottom: 10px;
+        }
+
+        [class^="illustration-"],
+        [class*=" illustration-"] {
+            position: absolute;
+
+            &.illustration-huile {
+                top: 5vw;
+                right: -10vw;
+                width: 21.7vw;
+
+                @media screen and (max-width:$screen-md) {
+                    width: 400px;
+                    right: -50px;
+                    top: -50px;
+                }
+            }
+
+            &.illustration-romarin {
+                bottom: 0;
+                left: -10vw;
+                width: 24.21vw;
+
+                @media screen and (max-width:$screen-md) {
+                    width: 400px;
+                    right: -50px;
+                    top: -50px;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .s-pastille {
+            margin-bottom: 70px;
+        }
+
+        &_content {
+            position: relative;
+            overflow: hidden;
+        }
+
+        &_item {
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid $rose;
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+
+            @media screen and (max-width:$screen-md) {
+                padding-top: 30px;
+                padding-bottom: 20px;
+            }
+
+            &:first-child {
+                border-top: 1px solid $rose;
+            }
+
+            &_button {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+
+                .text {
+                    width: calc(100% - 3rem);
+                    color: $vert;
+                    transition: all .3s ease;
+
+                    @media screen and (max-width:$screen-sm) {
+                        font-size: 35px;
+                        width: calc(100% - 30px);
+                    }
+
+                    @media screen and (max-width:$screen-xss) {
+                        font-size: 30px;
+                    }
+                }
+
+                .icon {
+                    display: block;
+                    width: 2.5rem;
+                    transform: rotate(0);
+                    transition: all .3s ease;
+
+                    @media screen and (max-width:$screen-md) {
+                        width: 25px;
+                    }
+
+                    svg {
+                        width: 100%;
+                        height: auto;
+
+                        path {
+                            fill: $vert;
+                            transition: all .3s ease;
+                        }
+                    }
+                }
+
+                &:hover {
+
+                    @media screen and (min-width:$screen-md) {
+                        .text {
+                            color: $rose;
+                            transition: all .3s ease;
+                        }
+
+                        .icon {
+
+                            svg {
+
+                                path {
+                                    fill: $rose;
+                                    transition: all .3s ease;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &_content {
+                display: none;
+
+                &>div {
+                    padding-top: 3.5rem;
+
+                    @media screen and (max-width:$screen-md) {
+                        padding-top: 30px;
+                    }
+                }
+
+                &_plat {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    margin-bottom: 4rem;
+
+                    @media screen and (max-width:$screen-md) {
+                        margin-bottom: 40px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .plat {
+                    padding-bottom: 4.16vw;
+
+                    @media screen and (max-width:$screen-md) {
+                        padding-bottom: 40px;
+                    }
+
+                    &_title {
+                        position: relative;
+                        margin: 0;
+                        padding-right: 3rem;
+
+                        @media screen and (max-width:$screen-md) {
+                            padding-right: 30px;
+                        }
+
+                        .title {
+                            position: relative;
+                            padding-right: 5rem;
+
+                            @media screen and (max-width:$screen-md) {
+                                padding-right: 0;
+                            }
+
+                            .icon-drive {
+                                display: inline-block;
+                                width: 2.3rem;
+                                margin-left: 10px;
+
+                                @media screen and (max-width:$screen-md) {
+                                    width: 23px;
+                                }
+
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+                        }
+
+                        .subtitle {
+                            margin-top: 5px;
+
+                            @media screen and (max-width:$screen-md) {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+
+                .sous-menu {
+                    padding-bottom: calc(4.16vw - 8rem);
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    position: relative;
+
+                    @media screen and (max-width:$screen-md) {
+                        padding-bottom: 40px;
+                        display: block;
+                    }
+
+                    &_title {
+                        margin-bottom: 4rem;
+
+                        @media screen and (max-width:$screen-md) {
+                            margin-bottom: 25px;
+                        }
+                    }
+
+                    &_bloc {
+                        position: relative;
+                        padding-bottom: 8rem;
+                        width: 25.5vw;
+
+                        @media screen and (max-width:$screen-md) {
+                            width: 100%;
+                            padding-bottom: 80px;
+                        }
+
+                        &:last-child {
+                            padding-bottom: 3.5rem;
+
+                            @media screen and (max-width:$screen-md) {
+                                padding-bottom: 0;
+                            }
+                        }
+
+                        &::after {
+                            display: block;
+                            content: '';
+                            width: 1px;
+                            height: calc(100% - 4rem);
+                            background-color: $rose;
+                            position: absolute;
+                            top: 0;
+                            left: -6.77vw;
+
+                            @media screen and (max-width:$screen-md) {
+                                display: none;
+                            }
+                        }
+
+                        &:nth-child(2n+1) {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &.last-full {
+                        .sous-menu {
+                            &_bloc {
+                                &:last-child {
+                                    width: 100%;
+
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.open {
+                .laCarte {
+                    &_item {
+                        &_button {
+                            .text {
+                                color: $rose;
+                                transition: all .3s ease;
+                            }
+
+                            .icon {
+                                transform: rotate(-45deg);
+                                transition: all .3s ease;
+
+                                svg {
+
+                                    path {
+                                        fill: $rose;
+                                        transition: all .3s ease;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

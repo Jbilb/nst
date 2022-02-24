@@ -1,0 +1,295 @@
+.c-blocText {
+    position: relative;
+
+    .h160 {
+        margin-bottom: 4.16vw;
+
+        @media screen and (max-width:$screen-md) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &::after {
+        display: block;
+        content: '';
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+
+        @media screen and (max-width:$screen-md) {
+            height: calc(154vw / 2) !important;
+        }
+    }
+
+    [class^="illustration-"],
+    [class*=" illustration-"] {
+        position: absolute;
+
+        &.illustration-pizza {
+            top: -15vw;
+            right: -13vw;
+            width: 45vw;
+
+            @media screen and (max-width:$screen-md) {
+                width: 400px;
+                right: -50px;
+                top: -50px;
+            }
+        }
+
+        &.illustration-pates {
+            top: 6vw;
+            left: -10.4vw;
+            width: 46vw;
+
+            @media screen and (max-width:$screen-md) {
+                width: 400px;
+                right: -50px;
+                top: -50px;
+            }
+        }
+
+        &.illustration-tomate {
+            top: 2vw;
+            right: -10.4vw;
+            width: 31.5vw;
+
+            @media screen and (max-width:$screen-md) {
+                width: 250px;
+                right: auto;
+                left: -50px;
+                top: -50px;
+            }
+        }
+
+        &.illustration-artichaud {
+            top: -5vw;
+            left: -1vw;
+            width: 31.5vw;
+
+            @media screen and (max-width:$screen-md) {
+                width: 250px;
+                right: auto;
+                left: -50px;
+                top: -50px;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .content-bot {
+        position: relative;
+        z-index: 1;
+    }
+
+    .img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 69.53vw;
+        height: 100%;
+
+        @media screen and (max-width:$screen-md) {
+            position: relative;
+            width: calc(100vw - 30px);
+            height: 154vw;
+            margin-top: 115px;
+        }
+
+        &.posi-left {
+            left: 0;
+        }
+
+        &.posi-right {
+            right: 0;
+
+            @media screen and (max-width:$screen-md) {
+                margin-left: auto;
+            }
+        }
+    }
+
+    &#nostraFamiglia {
+        padding-top: 24.21vw;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 350px;
+        }
+
+        .content-bot {
+            padding-bottom: 29.89vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-bottom: 0;
+            }
+        }
+
+        &::after {
+            background-color: $rose;
+            height: 21vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-top: 0;
+            }
+        }
+    }
+
+    &#pastaPizza {
+        padding-top: 22vw;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 350px;
+        }
+
+        .content-bot {
+            padding-bottom: 29.68vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-bottom: 0;
+            }
+        }
+
+        &::after {
+            background-color: $beige;
+            height: 21.6vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-top: 0;
+            }
+        }
+    }
+
+    &#fattoInCase {
+        padding-top: 20.20vw;
+        padding-bottom: 49.47vw;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 350px;
+            padding-bottom: 415px;
+        }
+
+        .content-bot {
+            padding-bottom: 26.3vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-bottom: 0;
+            }
+        }
+
+        .img {
+            @media screen and (max-width:$screen-md) {
+                img {
+                    object-position: left;
+                }
+            }
+        }
+
+        .bg-img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 65.1vw;
+            z-index: 0;
+
+            @media screen and (max-width:$screen-md) {
+                height: 705px;
+            }
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &#equipe {
+        padding-top: 26.5vw;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 200px;
+        }
+
+        .content-bot {
+            padding-bottom: 34.6vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-bottom: 0;
+            }
+
+            .h3 {
+                margin-bottom: 15px;
+            }
+        }
+
+        &::after {
+            background-color: $rose;
+            height: 23.4vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-top: 0;
+                height: calc(245px / 2) !important;
+            }
+        }
+
+        .img {
+            @media screen and (max-width:$screen-md) {
+                height: 245px;
+            }
+        }
+    }
+
+    &#equipe2 {
+        padding-top: 33vw;
+        padding-bottom: 44.7vw;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 350px;
+            padding-bottom: 580px;
+        }
+
+        .content-bot {
+            padding-bottom: 27vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-bottom: 0;
+            }
+
+            .h3 {
+                margin-bottom: 15px;
+
+                @media screen and (min-width:$screen-xl) {
+                    padding-right: 5vw;
+                }
+            }
+        }
+
+        .img {
+            @media screen and (max-width:$screen-md) {
+                height: 245px;
+            }
+        }
+
+        .bg-img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 65.1vw;
+            z-index: 0;
+
+            @media screen and (max-width:$screen-md) {
+                height: 705px;
+            }
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}

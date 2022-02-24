@@ -16,7 +16,8 @@
                             </p>
                             <h2 class="h3 title">Accedat huc suavitas quaedam</h2>
                             <div class="s-trait v-margeTitre anim-tiret woow" data-woow-toggle="true"
-                                data-woow-offset="80" style="--traitColor: #fff;"><span></span></div>
+                                data-woow-offset="80" style="--traitColor: #fff;">
+                                <span><?php include "img/svg/tiret.svg";?></span></div>
                             <p class="blanc anim-opacity woow" data-woow-toggle="true" data-woow-offset="80">Nunc vero
                                 inanes flatus quorundam vile esse quicquid extra urbis pomerium
                                 nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum

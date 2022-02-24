@@ -95,9 +95,7 @@
         }
 
         &_trait {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
             margin-top: 2vw;
 
             @media screen and (max-width:$screen-md) {
@@ -105,6 +103,9 @@
             }
 
             .s-trait {
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
                 width: 0;
                 animation: anim-tiret .3s linear forwards 1.1s;
 

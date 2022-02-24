@@ -26,6 +26,10 @@
             width: 23rem;
 
             @media screen and (max-width:$screen-md) {
+                width: 230px;
+            }
+
+            @media screen and (max-width:$screen-sm) {
                 width: 46.666vw;
             }
 
@@ -52,6 +56,7 @@
         &_picto {
             display: block;
             width: 14.8vw;
+            max-width: 53px;
             margin-right: 3vw;
             opacity: 1;
             transition: all .3s ease;

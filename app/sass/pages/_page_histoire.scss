@@ -9,4 +9,59 @@
             }
         }
     }
+
+    .histoire-intro {
+        position: relative;
+        overflow: hidden;
+        padding-top: 15vw;
+        padding-bottom: 39.84vw;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../img/content/histoire/bg-intro-histoire.jpg');
+
+        @media screen and (max-width:$screen-sm) {
+            background-image: url('../img/content/histoire/bg-intro-histoire-mobile.jpg');
+            padding-top: 260px;
+            padding-bottom: 618px;
+        }
+
+        .illustration {
+            position: absolute;
+            top: -5vw;
+            right: -8vw;
+            width: 34.6vw;
+
+            @media screen and (max-width:$screen-md) {
+                width: 300px;
+                right: -50px;
+                top: -50px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .histoire-passion {
+        position: relative;
+        overflow: hidden;
+        padding-top: 5vw;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 50px;
+        }
+
+        .img {
+            height: 58.2vw;
+
+            @media screen and (max-width:$screen-md) {
+                margin-top: 70px;
+                width: calc(100vw - 30px);
+                height: 154vw;
+            }
+        }
+    }
 }
