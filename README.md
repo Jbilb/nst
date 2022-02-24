@@ -19,10 +19,10 @@ Codes du projet
 
 3. Code BDD
  
-* adresse serveur : 
-* nom de la base : 
-* id : 
-* mot de passe : 
+* adresse serveur : doncamhadmin.mysql.db
+* nom de la base : doncamhadmin
+* id : doncamhadmin
+* mot de passe : B4z4A6NiVu2b
 
 
 Installation 
