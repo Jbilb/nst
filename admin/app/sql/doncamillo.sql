@@ -1,35 +1,27 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 24 fév. 2022 à 16:27
--- Version du serveur :  5.7.31
--- Version de PHP : 7.3.21
+-- Host: localhost:8889
+-- Generation Time: Feb 25, 2022 at 11:10 AM
+-- Server version: 5.7.30
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Base de données : `doncamillo`
+-- Database: `doncamillo_admin`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `articles`
+-- Table structure for table `articles`
 --
 
-DROP TABLE IF EXISTS `articles`;
-CREATE TABLE IF NOT EXISTS `articles` (
-  `id_article` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `articles` (
+  `id_article` int(11) NOT NULL,
   `id_categorie` int(11) NOT NULL,
   `title` tinytext NOT NULL,
   `tags` text,
@@ -50,13 +42,11 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `id_user` int(11) NOT NULL,
   `is_active` tinyint(4) DEFAULT '0',
   `featured` tinyint(4) DEFAULT '0',
-  `slug` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_article`),
-  KEY `id_categorie` (`id_categorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+  `slug` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `articles`
+-- Dumping data for table `articles`
 --
 
 INSERT INTO `articles` (`id_article`, `id_categorie`, `title`, `tags`, `cover_image`, `date_publication`, `intro_text`, `body_texts`, `body_titles`, `body_images`, `body_galeries`, `body_cta`, `body_links`, `body_videos`, `body_pdf`, `body_html_element`, `lectures`, `auteur`, `id_user`, `is_active`, `featured`, `slug`) VALUES
@@ -73,19 +63,17 @@ INSERT INTO `articles` (`id_article`, `id_categorie`, `title`, `tags`, `cover_im
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categories`
+-- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `categories`;
-CREATE TABLE IF NOT EXISTS `categories` (
-  `id_categorie` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `categories` (
+  `id_categorie` int(11) NOT NULL,
   `name` varchar(150) NOT NULL,
-  `slug` varchar(150) NOT NULL,
-  PRIMARY KEY (`id_categorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  `slug` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id_categorie`, `name`, `slug`) VALUES
@@ -96,26 +84,24 @@ INSERT INTO `categories` (`id_categorie`, `name`, `slug`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categories_menu`
+-- Table structure for table `categories_menu`
 --
 
-DROP TABLE IF EXISTS `categories_menu`;
-CREATE TABLE IF NOT EXISTS `categories_menu` (
-  `id_categorie_menu` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `categories_menu` (
+  `id_categorie_menu` int(11) NOT NULL,
   `name` varchar(250) CHARACTER SET utf8 NOT NULL,
   `plats` text CHARACTER SET utf8,
   `sous_categories` text CHARACTER SET utf8,
-  `is_sous_categorie` tinyint(4) DEFAULT '0',
-  PRIMARY KEY (`id_categorie_menu`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
+  `is_sous_categorie` tinyint(4) DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `categories_menu`
+-- Dumping data for table `categories_menu`
 --
 
 INSERT INTO `categories_menu` (`id_categorie_menu`, `name`, `plats`, `sous_categories`, `is_sous_categorie`) VALUES
-(3, 'Catégorie menu 3 - avec une sous-catégorie', 'a:1:{i:1;s:1:\"3\";}', 'a:2:{i:2;s:1:\"2\";i:3;s:2:\"10\";}', NULL),
-(4, 'Catégorie menu 4', 'N;', NULL, 0),
+(3, 'Catégorie menu 3 - avec une sous-catégorie', 'N;', 'N;', NULL),
+(4, 'Catégorie menu 4', 'a:3:{i:1;s:1:\"9\";i:3;s:1:\"6\";i:4;s:1:\"9\";}', 'a:1:{i:2;s:2:\"10\";}', NULL),
 (10, 'Catégorie menu 6 - sous-catégorie', 'a:3:{i:1;s:1:\"3\";i:2;s:1:\"1\";i:3;s:1:\"3\";}', NULL, 1),
 (22, 'Menu Presto', 'N;', 'N;', NULL),
 (23, 'Antipasti', 'N;', 'N;', NULL),
@@ -128,23 +114,21 @@ INSERT INTO `categories_menu` (`id_categorie_menu`, `name`, `plats`, `sous_categ
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaires`
+-- Table structure for table `commentaires`
 --
 
-DROP TABLE IF EXISTS `commentaires`;
-CREATE TABLE IF NOT EXISTS `commentaires` (
-  `id_commentaire` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `commentaires` (
+  `id_commentaire` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `date_publication` varchar(60) NOT NULL,
   `content` mediumtext NOT NULL,
   `id_article` int(11) NOT NULL,
-  `is_active` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id_commentaire`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+  `is_active` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `commentaires`
+-- Dumping data for table `commentaires`
 --
 
 INSERT INTO `commentaires` (`id_commentaire`, `name`, `email`, `date_publication`, `content`, `id_article`, `is_active`) VALUES
@@ -154,44 +138,40 @@ INSERT INTO `commentaires` (`id_commentaire`, `name`, `email`, `date_publication
 -- --------------------------------------------------------
 
 --
--- Structure de la table `menu`
+-- Table structure for table `menu`
 --
 
-DROP TABLE IF EXISTS `menu`;
-CREATE TABLE IF NOT EXISTS `menu` (
-  `id_menu` int(11) NOT NULL AUTO_INCREMENT,
-  `categories_menu` text CHARACTER SET utf8,
-  PRIMARY KEY (`id_menu`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+CREATE TABLE `menu` (
+  `id_menu` int(11) NOT NULL,
+  `categories_menu` text CHARACTER SET utf8
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `menu`
+-- Dumping data for table `menu`
 --
 
 INSERT INTO `menu` (`id_menu`, `categories_menu`) VALUES
-(1, 'a:5:{i:1;s:2:\"22\";i:2;s:2:\"23\";i:3;s:2:\"24\";i:4;s:2:\"28\";i:5;s:2:\"26\";}');
+(1, 'a:1:{i:1;s:2:\"28\";}');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `options`
+-- Table structure for table `options`
 --
 
-DROP TABLE IF EXISTS `options`;
-CREATE TABLE IF NOT EXISTS `options` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `options` (
+  `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(255) NOT NULL,
   `domain` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
   `url_admin` varchar(255) NOT NULL,
   `srcimg` varchar(50) NOT NULL,
-  `colorimg` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `colorimg` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `options`
+-- Dumping data for table `options`
 --
 
 INSERT INTO `options` (`id`, `name`, `email`, `domain`, `url`, `url_admin`, `srcimg`, `colorimg`) VALUES
@@ -200,21 +180,19 @@ INSERT INTO `options` (`id`, `name`, `email`, `domain`, `url`, `url_admin`, `src
 -- --------------------------------------------------------
 
 --
--- Structure de la table `plats`
+-- Table structure for table `plats`
 --
 
-DROP TABLE IF EXISTS `plats`;
-CREATE TABLE IF NOT EXISTS `plats` (
-  `id_plat` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `plats` (
+  `id_plat` int(11) NOT NULL,
   `title` varchar(250) CHARACTER SET utf8 NOT NULL,
   `descriptif` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
   `price` varchar(100) NOT NULL,
-  `is_takeaway` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id_plat`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+  `is_takeaway` tinyint(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `plats`
+-- Dumping data for table `plats`
 --
 
 INSERT INTO `plats` (`id_plat`, `title`, `descriptif`, `price`, `is_takeaway`) VALUES
@@ -222,27 +200,25 @@ INSERT INTO `plats` (`id_plat`, `title`, `descriptif`, `price`, `is_takeaway`) V
 (3, 'Plat 1', 'description plat 1', '24', 0),
 (4, 'Plat 3', 'description plat 3', '16', 0),
 (5, 'Plat 4', 'description plat 4', '18', 0),
-(6, 'Magret de canard entier', '(350gr hors cuisson)', '21', 0),
+(6, 'Magret de canard entier', '(350gr hors cuisson)', '21', 1),
 (7, 'Burger Don K', 'Pain maison, sauce burger, oignons confits, steak haché (250gr), bethmale, poitrine de porc', '16', 0),
 (8, 'Dame Blanche', '(3 boules vanille, chocolat chaud, chantilly, biscuit)', '7', 0),
-(9, 'Café liégeois', '(Glace café, glace vanille, expresso, chantilly, biscuit)', '7', 0);
+(9, 'Café liégeois', '(Glace café, glace vanille, expresso, chantilly, biscuit)', '7', 1);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `tags`
+-- Table structure for table `tags`
 --
 
-DROP TABLE IF EXISTS `tags`;
-CREATE TABLE IF NOT EXISTS `tags` (
-  `id_tag` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tags` (
+  `id_tag` int(11) NOT NULL,
   `slug` varchar(255) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  PRIMARY KEY (`id_tag`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+  `name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `tags`
+-- Dumping data for table `tags`
 --
 
 INSERT INTO `tags` (`id_tag`, `slug`, `name`) VALUES
@@ -258,22 +234,20 @@ INSERT INTO `tags` (`id_tag`, `slug`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id_user` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL,
   `lastname` varchar(100) NOT NULL,
   `firstname` varchar(100) NOT NULL,
   `role` tinyint(4) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id_user`, `lastname`, `firstname`, `role`, `email`, `password`) VALUES
@@ -282,16 +256,128 @@ INSERT INTO `users` (`id_user`, `lastname`, `firstname`, `role`, `email`, `passw
 (3, 'Nom client', 'Prénom client', 0, 'direction-pamiers@doncamillo-restaurants.fr', '$2y$10$u34LcTFfZALW9Alaie4a4evUghT1IYEnVPalaBylHMn9Neb9NguOO');
 
 --
--- Contraintes pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Contraintes pour la table `articles`
+-- Indexes for table `articles`
+--
+ALTER TABLE `articles`
+  ADD PRIMARY KEY (`id_article`),
+  ADD KEY `id_categorie` (`id_categorie`);
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id_categorie`);
+
+--
+-- Indexes for table `categories_menu`
+--
+ALTER TABLE `categories_menu`
+  ADD PRIMARY KEY (`id_categorie_menu`);
+
+--
+-- Indexes for table `commentaires`
+--
+ALTER TABLE `commentaires`
+  ADD PRIMARY KEY (`id_commentaire`);
+
+--
+-- Indexes for table `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`id_menu`);
+
+--
+-- Indexes for table `options`
+--
+ALTER TABLE `options`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `plats`
+--
+ALTER TABLE `plats`
+  ADD PRIMARY KEY (`id_plat`);
+
+--
+-- Indexes for table `tags`
+--
+ALTER TABLE `tags`
+  ADD PRIMARY KEY (`id_tag`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id_user`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `articles`
+--
+ALTER TABLE `articles`
+  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id_categorie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `categories_menu`
+--
+ALTER TABLE `categories_menu`
+  MODIFY `id_categorie_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `commentaires`
+--
+ALTER TABLE `commentaires`
+  MODIFY `id_commentaire` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `options`
+--
+ALTER TABLE `options`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `plats`
+--
+ALTER TABLE `plats`
+  MODIFY `id_plat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `tags`
+--
+ALTER TABLE `tags`
+  MODIFY `id_tag` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `articles`
 --
 ALTER TABLE `articles`
   ADD CONSTRAINT `Categorie used in article` FOREIGN KEY (`id_categorie`) REFERENCES `categories` (`id_categorie`) ON UPDATE NO ACTION;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

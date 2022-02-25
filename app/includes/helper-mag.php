@@ -6,6 +6,7 @@ require(realpath(__DIR__ . '/..').'/'.$folder_admin.'includes/inc_config.php');
 $client_name = "Melting K";
 
 $NAV_mag = "mag/";
+$NAV_TITLE_mag = "Le magazine";
 $NAV_mag_article = "article/";
 
 //*******************************

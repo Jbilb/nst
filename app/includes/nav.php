@@ -8,7 +8,8 @@
                         <?php include "img/logos/logo-doncamillo-bicolore.svg"; ?>
                     </a>
                     <div class="p-nav_content_right">
-                        <a href="" class="p-nav_content_link">
+                        <a href="<?php echo $NAV_page_carte; ?>" title="<?php echo $NAV_TITLE_page_carte; ?>"
+                            class="p-nav_content_link">
                             <span>notre carte</span>
                         </a>
                         <a href="" class="p-nav_content_link">

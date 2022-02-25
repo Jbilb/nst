@@ -98,9 +98,14 @@ include 'includes/header.php';
                                     ?>
                                     <div class="laCarte_item_content_plat">
                                         <h3 class="plat_title">
-                                            <span class="h4 vert title"><span class="text"><?=$plat->title();?></span>
-                                                <span class="icon-drive"><img src="img/svg/picto-a-emporter.svg"
-                                                        alt="picto-a-emporter"></span></span>
+                                            <span class="h4 vert title">
+                                                <span class="text"><?=$plat->title();?></span>
+                                                <?php if($plat->is_takeaway()) { ?>
+                                                <span class="icon-drive">
+                                                    <img src="img/svg/picto-a-emporter.svg" alt="picto-a-emporter">
+                                                </span>
+                                                <?php } ?>
+                                            </span>
                                             <p class="vert subtitle"><?=$plat->descriptif();?></p>
                                         </h3>
                                         <div class="plat_price h4 vert">
@@ -143,9 +148,13 @@ include 'includes/header.php';
                                         <div class="laCarte_item_content_plat">
                                             <h3 class="plat_title">
                                                 <span class="h4 vert title"><span
-                                                        class="text"><?=$plat->title();?></span> <span
-                                                        class="icon-drive"><img src="img/svg/picto-a-emporter.svg"
-                                                            alt="picto-a-emporter"></span></span>
+                                                        class="text"><?=$plat->title();?></span>
+                                                    <?php if($plat->is_takeaway()) { ?>
+                                                    <span class="icon-drive">
+                                                        <img src="img/svg/picto-a-emporter.svg" alt="picto-a-emporter">
+                                                    </span>
+                                                    <?php } ?>
+                                                </span>
                                                 <p class="vert subtitle"><?=$plat->descriptif();?></p>
                                             </h3>
                                             <div class="plat_price h4 vert">
