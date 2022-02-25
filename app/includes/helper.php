@@ -27,6 +27,16 @@ switch ($PAGE_name) {
         $META_description = "Nous recrutons ! Chez Don Camillo, nos collaborateurs, c'est notre famille. C'est dans cette optique que nous prenons soin de chaque membre de notre équipe.";
         $META_robots = "index,follow";
         break;
+    case 'restaurant_foix':
+        $META_title = "Don Camillo Foix - Trattoria familiale";
+        $META_description = "Votre restaurant italien est ouvert de 12h-13h30 / 19h-21h30. 108 chemin Rambail 09000 Foix - 09 74 19 08 09.";
+        $META_robots = "index,follow";
+        break;
+    case 'restaurant_pamiers':
+        $META_title = "Don Camillo Pamiers - Trattoria familiale";
+        $META_description = "Votre restaurant italien est ouvert de 12h-13h30 / 19h-21h30. Zone Chandelet Avenue de la Bouriette 09100 Pamiers - 09 74 19 08 09 - Fermé le dimanche midi.";
+        $META_robots = "index,follow";
+        break;
     case 'contact':
         $META_title = "Don Camillo - Contactez-nous.";
         $META_description = "Besoin d’informations sur nos restaurants ou nos recettes italiennes ? Contactez-nos équipes : 09 74 19 08 09.";
@@ -62,6 +72,12 @@ $NAV_TITLE_page_carte = 'Des bons produits et basta !';
 
 $NAV_page_rejoindre = 'rejoindre-la-famille';
 $NAV_TITLE_page_rejoindre = 'Bienvenue chez Don Camillo';
+
+$NAV_restaurant_foix = 'don-camillo-foix';
+$NAV_TITLE_restaurant_foix = 'Restaurant Foix';
+
+$NAV_restaurant_pamiers = 'don-camillo-pamiers';
+$NAV_TITLE_restaurant_pamiers = 'Restaurant Pamiers';
 
 $NAV_contact = 'contactez-nous';
 $NAV_TITLE_contact = 'Restaurants Don Camillo';

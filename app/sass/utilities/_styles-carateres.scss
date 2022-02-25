@@ -44,6 +44,18 @@ p {
         }
     }
 
+    &-verySmall {
+        @include fluid-text(11px, 13px, 1, 991px, 1920px);
+
+        @media(max-width:$screen-md) {
+            font-size: 14px;
+        }
+
+        @media(max-width:$screen-xss) {
+            font-size: 13px;
+        }
+    }
+
     &.v-maxWidth {
         max-width: $pMaxWith;
 
@@ -53,6 +65,11 @@ p {
 
         &.right {
             margin-left: auto;
+        }
+
+        &.center {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

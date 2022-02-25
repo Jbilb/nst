@@ -1,0 +1,184 @@
+.restaurant_foix,
+.restaurant_pamiers {
+
+    .c-aside {
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 200px;
+            padding-bottom: 80px;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .illustration-poivrons {
+            position: absolute;
+            top: -20vw;
+            left: -5vw;
+            width: 23.9vw;
+
+            @media screen and (max-width:$screen-md) {
+                width: 230px;
+                top: -190px;
+                left: -80px;
+            }
+        }
+
+        .illustration-couvert {
+            position: absolute;
+            bottom: -10vw;
+            right: -5vw;
+            width: 35.15vw;
+
+            @media screen and (max-width:$screen-md) {
+                display: none;
+            }
+        }
+    }
+
+    .restaurant-bg {
+        position: relative;
+        overflow: hidden;
+        height: 56.25vw;
+        width: 100%;
+
+        @media screen and (max-width:$screen-md) {
+            height: 135vw;
+        }
+
+        .img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .restaurant-desc {
+        position: relative;
+        overflow: hidden;
+        padding-top: 14.58vw;
+        padding-bottom: 14.58vw;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 230px;
+            padding-bottom: 50px;
+        }
+
+        .container-bouton {
+            margin-top: 3.4vw;
+
+            @media screen and (max-width:$screen-md) {
+                margin-top: 50px;
+            }
+        }
+
+        .illustration {
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    #pizza1 {
+        padding-top: 0;
+
+        .content-bot {
+            padding-bottom: 27vw;
+
+            &_title {
+                margin-bottom: 2.3vw;
+
+                @media screen and (max-width:$screen-md) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .img {
+            width: 57.55vw;
+
+            @media screen and (max-width:$screen-md) {
+                position: relative;
+                width: calc(100vw - 30px);
+                height: 65.33vw;
+                margin-top: 50px;
+            }
+        }
+
+        &::after {
+            background-color: $rose;
+            height: 21.3vw;
+
+            @media screen and (max-width:$screen-md) {
+                padding-top: 0;
+                height: calc(245px / 2) !important;
+            }
+        }
+    }
+
+    #pizza2 {
+        padding-top: 33vw;
+        padding-bottom: 44.7vw;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 350px;
+            padding-bottom: 580px;
+        }
+
+        .content-bot {
+            padding-bottom: 27vw;
+
+            &_title {
+                margin-bottom: 2.3vw;
+
+                @media screen and (max-width:$screen-md) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .img {
+            width: 57.55vw;
+
+            @media screen and (max-width:$screen-md) {
+                position: relative;
+                width: calc(100vw - 30px);
+                height: 65.33vw;
+                margin-top: 50px;
+            }
+        }
+
+        .bg-img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 65.1vw;
+            z-index: 0;
+
+            @media screen and (max-width:$screen-md) {
+                height: 705px;
+            }
+        }
+
+        .container-bouton {
+            margin-top: 2vw;
+
+            @media screen and (max-width:$screen-md) {
+                margin-top: 40px;
+            }
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}

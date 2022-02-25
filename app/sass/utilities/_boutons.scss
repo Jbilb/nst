@@ -89,4 +89,20 @@
             }
         }
     }
+    &.bg0-white-brvert {
+        border: 1px solid $vert;
+        background-color: $vert;
+
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+
+            @media screen and (min-width:$screen-md) {
+                background-color: transparent;
+                color: $blanc;
+            }
+        }
+    }
 }

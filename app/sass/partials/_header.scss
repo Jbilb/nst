@@ -110,7 +110,7 @@
                 animation: anim-tiret .3s linear forwards 1.1s;
 
                 @media screen and (max-width:$screen-md) {
-                    animation: anim-tiret-vm .3s linear forwards 1.1;
+                    animation: anim-tiret-vm .3s linear forwards 1.1s;
                 }
             }
 
@@ -124,7 +124,7 @@
                 .s-trait {
                     width: 0;
                     animation: anim-tiret .3s linear forwards .8s;
-    
+
                     @media screen and (max-width:$screen-md) {
                         animation: anim-tiret-vm .3s linear forwards .8s;
                     }

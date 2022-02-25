@@ -10,7 +10,8 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-md-6 col-xl-5 col-xl-offset-1">
-                <a href="" class="c-accelerateurs_item vert-bg woow" data-woow-offset="60">
+                <a href="<?php echo $NAV_restaurant_foix; ?>" title="<?php echo $NAV_TITLE_restaurant_foix; ?>"
+                    class="c-accelerateurs_item vert-bg woow" data-woow-offset="60">
                     <?php $lisere_border = false; include "includes/lisere.php"; ?>
                     <div class="content">
                         <h3 class="h3 center beige uppercase content_title">RESTAURANT Foix</h3>
@@ -24,7 +25,8 @@
                 </a>
             </div>
             <div class="col-xs-12 col-md-6 col-xl-5">
-                <a href="" class="c-accelerateurs_item vert-bg woow" data-woow-offset="60">
+                <a href="<?php echo $NAV_restaurant_pamiers; ?>" title="<?php echo $NAV_TITLE_restaurant_pamiers; ?>"
+                    class="c-accelerateurs_item vert-bg woow" data-woow-offset="60">
                     <?php $lisere_border = false; include "includes/lisere.php"; ?>
                     <div class="content">
                         <h3 class="h3 center beige uppercase content_title">RESTAURANT PamIers</h3>

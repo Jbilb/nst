@@ -1,0 +1,30 @@
+.restaurant_foix {
+
+    .p-header {
+
+        &_bg {
+            background-image: url('../img/header/bg-don-camillo-foix.jpg');
+
+            @media screen and (max-width:$screen-md) {
+                background-image: url('../img/header/mobile/bg-don-camillo-foix.jpg');
+            }
+        }
+    }
+
+    .restaurant-desc {
+
+        .illustration {
+            position: absolute;
+            width: 43.2vw;
+            top: -17.8vw;
+            left: -11.6vw;
+
+            @media screen and (max-width:$screen-md) {
+                width: 385px;
+                top: -230px;
+                left: -130px;
+            }
+        }
+    }
+
+}
