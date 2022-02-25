@@ -9,12 +9,13 @@ class PlatManager extends Manager
     public function create(Plat $plat) 
     {
         // Préparation de la requête à executer pour ajouter une catégorie.
-        $q = $this->_db->prepare('INSERT INTO plats(title, descriptif, price) VALUES(:title, :descriptif, :price)');
+        $q = $this->_db->prepare('INSERT INTO plats(title, descriptif, price, is_takeaway) VALUES(:title, :descriptif, :price, :is_takeaway)');
 
         // Assignation des différentes valeurs 
         $q->bindValue(':title', $plat->title());
         $q->bindValue(':descriptif', $plat->descriptif());
         $q->bindValue(':price', $plat->price());
+        $q->bindValue(':is_takeaway', $plat->is_takeaway());
 
         // Execution de la requête
         $q->execute(); 
@@ -29,13 +30,14 @@ class PlatManager extends Manager
     public function update(Plat $plat) 
     {
         // Préparation de la requête à executer pour modifier le plat
-        $q = $this->_db->prepare('UPDATE plats SET title = :title, descriptif = :descriptif, price = :price WHERE id_plat = :id_plat');
+        $q = $this->_db->prepare('UPDATE plats SET title = :title, descriptif = :descriptif, price = :price, is_takeaway = :is_takeaway WHERE id_plat = :id_plat');
 
         // Assignation des différentes valeurs.
         $q->bindValue(':title', $plat->title());
         $q->bindValue(':descriptif', $plat->descriptif());
         $q->bindValue(':price', $plat->price());
         $q->bindValue(':id_plat', $plat->id_plat());
+        $q->bindValue(':is_takeaway', $plat->is_takeaway());
 
         // Execution de la requête.
         $q->execute();

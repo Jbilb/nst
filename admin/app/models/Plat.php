@@ -9,6 +9,7 @@ class Plat
     private $_title;
     private $_descriptif;
     private $_price;
+    private $_is_takeaway;
     
     
     // ========================================================
@@ -56,6 +57,10 @@ class Plat
     {
         return $this->_price;
     }
+    public function is_takeaway()
+    {
+        return $this->_is_takeaway;
+    }
     
     // ========================================================
     // Setters : mettent à jour les valeurs des attributs de l'élément
@@ -89,6 +94,14 @@ class Plat
         if (is_string($price))
         {
           $this->_price = $price;
+        }
+    }
+    public function setIs_takeaway($is_takeaway)
+    {
+        $is_takeaway = (int) $is_takeaway;
+        if ($is_takeaway == 0 || $is_takeaway == 1)
+        {
+          $this->_is_takeaway = $is_takeaway;
         }
     }
 }

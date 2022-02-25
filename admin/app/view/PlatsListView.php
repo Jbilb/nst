@@ -29,6 +29,7 @@ include 'includes/inc_main_topbar.php';
                         <tr>
                           <th>Nom</th>
                           <th>Description</th>
+                          <th>A emporter</th>
                           <th>Prix</th>
                           <th style="width: auto; text-align:right"></th>
                         </tr>
@@ -43,6 +44,11 @@ include 'includes/inc_main_topbar.php';
                         <tr>
                           <td><strong><?=$plat->title()?></strong></td>
                           <td><strong><?=$plat->descriptif()?></strong></td>
+                          <td>
+                              <?php 
+                                  echo ($plat->is_takeaway()) ? "<strong class='green'>Oui</strong>" : "<span>Non</span>";
+                              ?>
+                          </td>
                           <td><strong><?=$plat->price()?></strong></td>
                           <td style="text-align:right">
                            <form method="post" class="edition">

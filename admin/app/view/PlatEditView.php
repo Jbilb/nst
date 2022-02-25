@@ -36,6 +36,15 @@ include 'includes/inc_main_topbar.php';
                             <label>Prix :</label>
                             <input class="form-control" placeholder="Entrez le prix :" type="text" value="<?=$plat->price()?>" name="required[alphanum][price]" data-required="Vous devez entrez un prix" required>
                         </div>
+                        <div class="form-group">
+                            <label>Ce plat est disponible à la vente à emporter</label><br>
+                            <strong>Non</strong>&nbsp;&nbsp;
+                            <label class="switch">
+                                <input type="checkbox" name="is_takeaway" value="1" <?=($plat->is_takeaway()) ? "checked" : ""?>/>
+                                <span class="slider"></span>
+                            </label>
+                            &nbsp;&nbsp;<strong>Oui</strong>
+                        </div>
                     </div>
                 </div>
             </div>

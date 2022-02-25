@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 24 fév. 2022 à 16:27
+-- Généré le : mer. 16 fév. 2022 à 14:16
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -195,7 +195,7 @@ CREATE TABLE IF NOT EXISTS `options` (
 --
 
 INSERT INTO `options` (`id`, `name`, `email`, `domain`, `url`, `url_admin`, `srcimg`, `colorimg`) VALUES
-(1, 'Le Don Camillo', 'direction-pamiers@doncamillo-restaurants.fr', 'doncamillo-restaurants.fr', 'http://www.doncamillo-restaurants.fr', 'http://www.doncamillo-restaurants.fr/admin-mag', 'img/logo.png', '#243648');
+(1, 'Le Don Camillo', 'direction-pamiers@doncamillo-restaurants.fr', 'doncamillo-restaurants.fr', 'http://www.doncamillo-restaurants.fr', 'http://www.doncamillo-restaurants.fr/admin-mag', 'img/logo.png', '#FFFFFF');
 
 -- --------------------------------------------------------
 
@@ -209,7 +209,6 @@ CREATE TABLE IF NOT EXISTS `plats` (
   `title` varchar(250) CHARACTER SET utf8 NOT NULL,
   `descriptif` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
   `price` varchar(100) NOT NULL,
-  `is_takeaway` tinyint(1) NOT NULL,
   PRIMARY KEY (`id_plat`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
@@ -217,15 +216,15 @@ CREATE TABLE IF NOT EXISTS `plats` (
 -- Déchargement des données de la table `plats`
 --
 
-INSERT INTO `plats` (`id_plat`, `title`, `descriptif`, `price`, `is_takeaway`) VALUES
-(1, 'Plat 2', 'description plat 2', '22.5', 0),
-(3, 'Plat 1', 'description plat 1', '24', 0),
-(4, 'Plat 3', 'description plat 3', '16', 0),
-(5, 'Plat 4', 'description plat 4', '18', 0),
-(6, 'Magret de canard entier', '(350gr hors cuisson)', '21', 0),
-(7, 'Burger Don K', 'Pain maison, sauce burger, oignons confits, steak haché (250gr), bethmale, poitrine de porc', '16', 0),
-(8, 'Dame Blanche', '(3 boules vanille, chocolat chaud, chantilly, biscuit)', '7', 0),
-(9, 'Café liégeois', '(Glace café, glace vanille, expresso, chantilly, biscuit)', '7', 0);
+INSERT INTO `plats` (`id_plat`, `title`, `descriptif`, `price`) VALUES
+(1, 'Plat 2', 'description plat 2', '22.5'),
+(3, 'Plat 1', 'description plat 1', '24'),
+(4, 'Plat 3', 'description plat 3', '16'),
+(5, 'Plat 4', 'description plat 4', '18'),
+(6, 'Magret de canard entier', '(350gr hors cuisson)', '21'),
+(7, 'Burger Don K', 'Pain maison, sauce burger, oignons confits, steak haché (250gr), bethmale, poitrine de porc', '16'),
+(8, 'Dame Blanche', '(3 boules vanille, chocolat chaud, chantilly, biscuit)', '7'),
+(9, 'Café liégeois', '(Glace café, glace vanille, expresso, chantilly, biscuit)', '7');
 
 -- --------------------------------------------------------
 

@@ -28,6 +28,7 @@ include 'includes/inc_main_topbar.php';
                       <thead>
                         <tr>
                           <th>Titre</th>
+                          <th>Sous-catégorie</th>
                           <th style="width: auto; text-align:right"></th>
                         </tr>
                       </thead>
@@ -40,6 +41,11 @@ include 'includes/inc_main_topbar.php';
                         ?>
                         <tr>
                           <td><strong><?=$categorie_menu->name()?></strong></td>
+                          <td>
+                              <?php 
+                                  echo ($categorie_menu->is_sous_categorie()) ? "<strong class='green'>Oui</strong>" : "<span>Non</span>";
+                              ?>
+                          </td>
                           <td style="text-align:right">
                            <form method="post" class="edition">
                                 <a href="categories-menu/edit/<?=$categorie_menu->id_categorie_menu()?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Modifier</a>
