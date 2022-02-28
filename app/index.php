@@ -176,10 +176,8 @@ include 'includes/header.php';
                         <div class="s-trait v-margeTitre anim-tiret woow" data-woow-toggle="true" data-woow-offset="80"
                             style="--traitColor: #E39077;"><span><?php include "img/svg/tiret.svg";?></span></div>
                         <p class="noir v-maxWidth anim-opacity woow" data-woow-toggle="true" data-woow-offset="70"
-                            style="--pMaxWith: 27rem;">Mettre vos pieds sous nos tables, c’est
-                            partager
-                            notre histoire de famille le
-                            temps d’un bon repas. </p>
+                            style="--pMaxWith: 27rem;">Ouvrir la porte de nos restaurants, c'est la garantie de recettes
+                            faites maison élaborées à partir de produits frais.</p>
                     </div>
                 </div>
             </div>

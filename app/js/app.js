@@ -359,7 +359,6 @@
                 settings = {
                     infinite: false,
                     arrows: false,
-                    adaptiveHeight: true,
                     dots: true,
                     autoplay: false,
                     speed: 300,
@@ -367,6 +366,7 @@
                     draggable: false,
                     swipeToSlide: true,
                     appendDots: '[dots-etapes]',
+                    adaptiveHeight: true
                 };
             $(slider).slick(settings);
 

@@ -2,7 +2,7 @@
 return $restaurants = [
     'pamiers' => [ 
         'name'      => 'Pamiers',
-        'schedule'      => 'du lundi au samedi <br class="keep">12h-13h30 / 19h-21h30 <br class="keep">le dimanche 19h-21h30',
+        'schedule'      => '12h-13h30 / 19h-21h30 <br class="keep">Fermé le dimanche midi',
         'adress'      => 'Zone Chandelet<br class="keep"> Avenue de la Bouriette',
         'city'      => 'Pamiers',
         'cp'      => '09100',
@@ -12,7 +12,7 @@ return $restaurants = [
     ],
 	'foix' => [ 
         'name'      => 'Foix',
-        'schedule'      => 'de 12h-13h30 / 19h-21h30',
+        'schedule'      => '12h-13h30 / 19h-21h30',
         'adress'      => '108 chemin Rambail',
         'city'      => 'Foix',
         'cp'      => '09000',

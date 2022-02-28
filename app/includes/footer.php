@@ -78,8 +78,8 @@
                                 <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
                             </div>
                             <div class="bloc_horaires">
-                                <p class="blanc center">À votre service <br
-                                        class="keep"><?=$restaurants[$city]['schedule'];?>
+                                <p class="blanc center">À votre service <br class="keep">tous les jours
+                                    <br class="keep"><?=$restaurants[$city]['schedule'];?>
                                 </p>
                             </div>
                             <div class="bloc_adresses">
@@ -125,7 +125,7 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="p-footer_bot">
-                        <p class="center paragr-small">Copyright 2021 Don Camillo - Tous droits réservés - <a
+                        <p class="center paragr-small">Copyright 2022 Don Camillo - Tous droits réservés - <a
                                 target="_blank" href="https://www.melting-k.fr/"
                                 title="Agence de communication globale"> Site
                                 par

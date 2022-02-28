@@ -76,7 +76,8 @@
     &_horaires {
         position: relative;
         overflow: hidden;
-        padding: 5vw 0;
+        padding-top: 4vw;
+        padding-bottom: 3.5vw;
 
         @media screen and (max-width:$screen-md) {
             padding: 80px 50px;
@@ -92,7 +93,7 @@
             z-index: 1;
 
             &_title {
-                margin-bottom: 2vw;
+                margin-bottom: 1.5vw;
 
                 @media screen and (max-width:$screen-md) {
                     margin-bottom: 35px;

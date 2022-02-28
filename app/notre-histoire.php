@@ -26,7 +26,8 @@ include 'includes/header.php';
                             <p class="center vert anim-opacity woow" data-woow-toggle="true" data-woow-offset="70">
                                 Tout a commencé quand notre père Joël, alors qu’il avait à peine 14 ans, a pris la
                                 décision d’arrêter ses études pour se consacrer à sa véritable passion : la cuisine.
-                                Nous sommes ainsi nés directement dans les cuisine du premier restaurant de nos parents,
+                                Nous sommes ainsi nés directement dans les cuisines du premier restaurant de nos
+                                parents,
                                 au milieu de la farine, des poêles et des casseroles.
                             </p>
                             <p class="center vert anim-opacity woow" data-woow-toggle="true" data-woow-offset="70">

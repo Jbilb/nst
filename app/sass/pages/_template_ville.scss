@@ -40,6 +40,30 @@
                 display: none;
             }
         }
+
+        .illustration-tomate {
+            position: absolute;
+            top: -10vw;
+            left: -5vw;
+            width: 31.125vw;
+
+            @media screen and (max-width:$screen-md) {
+                width: 300px;
+                top: -120px;
+                left: -80px;
+            }
+        }
+
+        .illustration-huile {
+            position: absolute;
+            bottom: -20vw;
+            right: -5vw;
+            width: 25.15vw;
+
+            @media screen and (max-width:$screen-md) {
+                display: none;
+            }
+        }
     }
 
     .restaurant-bg {

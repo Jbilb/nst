@@ -102,6 +102,12 @@
 
         &_slider {
 
+            .slick-list {
+                @media screen and (max-width:$screen-md) {
+                    height: auto !important;
+                }
+            }
+
             &_content {
                 display: flex;
                 align-items: center;
