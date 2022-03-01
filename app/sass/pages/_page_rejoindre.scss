@@ -1,7 +1,35 @@
 .page_rejoindre {
+
     .p-header {
+
         &_bg {
-            background-image: url('../img/header/');
+            background-image: url('../img/header/bg-don-camillo-rejoindre.jpg');
+
+            @media screen and (max-width:$screen-md) {
+                background-image: url('../img/header/mobile/bg-don-camillo-rejoindre.jpg');
+            }
         }
     }
+
+    .rejoindre-poste {
+        position: relative;
+        overflow: hidden;
+
+        &_etape {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &_title {
+                margin-bottom: 3.125vw;
+            }
+
+            &_subtitle {
+                margin-bottom: 2vw;
+            }
+        }
+    }
+
 }

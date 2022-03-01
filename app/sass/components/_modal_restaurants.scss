@@ -1,0 +1,165 @@
+.c-restaurants {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $vert;
+    z-index: 103;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity .2s ease .2s, max-height .1s linear .4s;
+
+    .container {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &_content {
+        width: 100%;
+        height: 52.3vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        z-index: 2;
+        transition: all .3s ease;
+
+        @media screen and (max-width:$screen-md) {
+            height: auto;
+            padding-top: 90px;
+            flex-direction: column;
+        }
+
+        .c-lisere {
+            @media screen and (max-width:$screen-md) {
+                display: none;
+            }
+        }
+
+        &_item {
+            position: relative;
+            z-index: 2;
+
+            .content {
+                &_title {
+                    margin-bottom: 1vw;
+
+                    @media screen and (max-width:$screen-md) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .separateur {
+            display: block;
+            position: relative;
+            z-index: 3;
+            width: 6px;
+            margin-left: 6.77vw;
+            margin-right: 6.77vw;
+
+            @media screen and (max-width:$screen-md) {
+                height: 33.33vw;
+                margin: 0;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    transform: rotate(90deg);
+                }
+            }
+
+            svg {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        .content_bouton {
+            margin-top: 3vw;
+
+            @media screen and (max-width:$screen-md) {
+                margin-top: 9.33vw;
+            }
+        }
+    }
+
+    [class^="forme-"],
+    [class*=" forme-"] {
+        position: absolute;
+        z-index: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        &.forme-pizza {
+            width: 39.5vw;
+            bottom: -11.5vw;
+            left: -11.5vw;
+            transform: translateX(-30%)translateY(30%)rotate(15deg);
+            transition: all .3s ease;
+
+            @media screen and (max-width:$screen-md) {
+                width: 81.8vw;
+                bottom: -34.6vw;
+                left: -34.6vw;
+            }
+        }
+
+        &.forme-basilic {
+            width: 34.6vw;
+            top: -7vw;
+            right: -10.4vw;
+            transform: translateX(40%)translateY(-30%);
+            transition: all .3s ease;
+
+            @media screen and (max-width:$screen-md) {
+                width: 97vw;
+                top: -18.66vw;
+                right: -47vw;
+            }
+        }
+    }
+
+    &.ouvert {
+        max-height: 100%;
+        opacity: 1;
+        transition: opacity .4s ease .1s, max-height .1s linear;
+
+        [class^="forme-"],
+        [class*=" forme-"] {
+            position: absolute;
+            z-index: 0;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            &.forme-pizza {
+                transform: translateX(0)translateY(0)rotate(0);
+                transition: all .3s ease .4s;
+            }
+
+            &.forme-basilic {
+                transform: translateX(0)translateY(0);
+                transition: all .3s ease .4s;
+            }
+        }
+
+        .c-restaurants {
+            &_content {
+                opacity: 1;
+                transition: all .4s ease .2s;
+            }
+        }
+    }
+}

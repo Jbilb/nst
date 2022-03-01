@@ -106,6 +106,7 @@ $LINK_TITLE_allergenes = 'Allergènes Don Camillo';
 //*******************************
 
 $DATA_restaurants = include_once 'datastore/restaurants.data.php';
+$DATA_recrutement = include_once 'datastore/recrutement.data.php';
 
 //*******************************
 // SHARING ELEMENTS

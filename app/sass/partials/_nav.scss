@@ -254,7 +254,7 @@
 
     &.ouvert {
         background-color: transparent;
-        transition: all .3s ease;
+        transition: all .3s ease .2s;
 
         .p-nav {
             &_content {

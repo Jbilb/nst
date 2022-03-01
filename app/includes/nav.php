@@ -12,18 +12,18 @@
                             class="p-nav_content_link">
                             <span>notre carte</span>
                         </a>
-                        <a href="" class="p-nav_content_link">
+                        <button class="p-nav_content_link js-modal" data-modal="js-restaurants">
                             <span>nos restaurants</span>
-                        </a>
-                        <div class="p-nav_content_reservation">
-                            <a href="" class="p-nav_content_picto">
+                        </button>
+                        <div class="p-nav_content_reservation js-modal" data-modal="js-reservez">
+                            <button class="p-nav_content_picto">
                                 <img src="img/icons/commande.svg" alt="commande">
-                            </a>
-                            <a href="" class="p-nav_content_bouton bouton">
+                            </button>
+                            <button class="p-nav_content_bouton bouton">
                                 <span>réservation</span>
-                            </a>
+                            </button>
                         </div>
-                        <div class="p-nav_content_burger js-menu">
+                        <div class="p-nav_content_burger js-modal" data-modal="js-menu">
                             <button class="content">
                                 <span class="barre"></span>
                                 <span class="barre"></span>

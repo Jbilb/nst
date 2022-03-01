@@ -55,13 +55,13 @@
                                         title="<?php echo $NAV_TITLE_page_carte; ?>">La carte</a>
                                 </li>
                                 <li>
-                                    <button class="paragr item">
+                                    <button class="paragr item js-modal" data-modal="js-restaurants">
                                         Nos restaurants
                                     </button>
                                 </li>
                             </ul>
                             <div class="bloc_bouton">
-                                <button class="bouton bg0-white-brRose">
+                                <button class="bouton bg0-white-brRose js-modal" data-modal="js-reservez">
                                     <span>Réservation</span>
                                 </button>
                             </div>

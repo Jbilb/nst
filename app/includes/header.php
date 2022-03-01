@@ -52,6 +52,8 @@
     <?php
         include 'includes/nav.php';
         include 'includes/menu.php';
+        include 'includes/modal-restaurants.php';
+        include 'includes/modal-reservez.php';
     ?>
     <!-- START WRAPPER OVERSCROLLBAR-->
     <div id="wrapper-scroll">

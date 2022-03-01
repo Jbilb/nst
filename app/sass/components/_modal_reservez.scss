@@ -1,0 +1,184 @@
+.c-reservez {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $vert;
+    z-index: 103;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity .2s ease .2s, max-height .1s linear .4s;
+
+    .container {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &_content {
+        width: 100%;
+        height: 45.4vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        opacity: 0;
+        transition: all .3s ease;
+
+        @media screen and (max-width:$screen-md) {
+            height: auto;
+            padding-top: 90px;
+            flex-direction: column;
+        }
+
+        .c-lisere {
+            @media screen and (max-width:$screen-md) {
+                display: none;
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+
+            &_title {
+                margin-bottom: 3.5vw;
+
+                @media screen and (max-width:$screen-md) {
+                    margin-bottom: 10vw;
+                }
+            }
+
+            &_boutons {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @media screen and (max-width:$screen-md) {
+                    justify-content: space-around;
+                }
+
+                input[type=radio],
+                input[type=checkbox] {
+                    appearance: none;
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+
+                &>div {
+                    margin-right: 3.125vw;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    @media screen and (max-width:$screen-md) {
+                        margin-right: 0;
+                        width: calc(50% - 7.5px);
+                    }
+                }
+
+                .bouton {
+
+                    @media screen and (max-width:$screen-md) {
+                        min-width: 0;
+                        width: 100%;
+                    }
+                }
+
+                input[type=radio]:checked+label,
+                input[type=checkbox]:checked+label {
+                    border: 1px solid $rose;
+                    background-color: $rose;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+
+    &_bouton {
+        margin-top: 3.6vw;
+
+        @media screen and (max-width:$screen-md) {
+            margin-top: 16vw;
+        }
+    }
+
+    [class^="forme-"],
+    [class*=" forme-"] {
+        position: absolute;
+        z-index: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        &.forme-huile {
+            width: 25.5vw;
+            bottom: -15vw;
+            left: 0;
+            transform: translateX(-20%)translateY(20%)rotate(15deg);
+            transition: all .3s ease;
+
+            @media screen and (max-width:$screen-md) {
+                width: 61.3vw;
+                bottom: -40vw;
+                left: -10vw;
+            }
+        }
+
+        &.forme-poivron {
+            width: 23.9vw;
+            top: -12vw;
+            right: -7vw;
+            transform: translateX(30%)translateY(-30%);
+            transition: all .3s ease;
+
+            @media screen and (max-width:$screen-md) {
+                width: 57vw;
+                top: -25vw;
+                right: -15vw;
+            }
+        }
+    }
+
+    &.ouvert {
+        max-height: 100%;
+        opacity: 1;
+        transition: opacity .4s ease .1s, max-height .1s linear;
+
+        [class^="forme-"],
+        [class*=" forme-"] {
+            position: absolute;
+            z-index: 0;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            &.forme-poivron {
+                transform: translateX(0)translateY(0)rotate(0);
+                transition: all .3s ease .4s;
+            }
+
+            &.forme-huile {
+                transform: translateX(0)translateY(0);
+                transition: all .3s ease .4s;
+            }
+        }
+
+        .c-reservez {
+            &_content {
+                opacity: 1;
+                transition: all .4s ease .2s;
+            }
+        }
+    }
+}

@@ -17,14 +17,14 @@
                                 </li>
                                 <li class="<?php if($PAGE_name === "page5") {echo 'active';} ?>">
                                     <div class="wrap-item">
-                                        <button class="item">
+                                        <button class="item js-modal" data-modal="js-restaurants">
                                             Nos restaurants
                                         </button>
                                     </div>
                                 </li>
                             </ul>
                             <div class="p-menu_bouton">
-                                <button class="bouton bg0-white-brRose">
+                                <button class="bouton bg0-white-brRose js-modal" data-modal="js-reservez">
                                     <span>Réservation</span>
                                 </button>
                             </div>

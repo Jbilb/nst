@@ -113,26 +113,58 @@
         ///////////////////////////////////////////////////////
 
         function menu() {
-            $('.js-menu').on('click', function (event) {
+
+            $('.js-modal').on('click', function (event) {
                 event.stopPropagation();
                 var elemNav = $('.p-nav');
                 var elemMenu = $('.p-menu');
+                var elemRestaurants = $('.c-restaurants');
+                var elemReservez = $('.c-reservez');
                 var elemHtml = $('html');
                 var elemBarreScroll = $('.os-scrollbar-handle');
-                if (elemNav.hasClass('ouvert')) {
-                    elemNav.removeClass('ouvert');
-                    $(this).removeClass('ouvert');
-                    elemMenu.removeClass('ouvert');
-                    elemBarreScroll.removeClass('menuOpen');
-                    elemHtml.removeClass('noscroll');
+                var data = $(this).data("modal");
+
+                if (elemMenu.hasClass('ouvert') || elemRestaurants.hasClass('ouvert') || elemReservez.hasClass('ouvert')) {
+                    if (data === "js-restaurants") {
+                        elemRestaurants.addClass('ouvert');
+                        elemNav.addClass('ouvert');
+                    } else if (data === "js-reservez") {
+                        elemReservez.addClass('ouvert');
+                        elemNav.addClass('ouvert');
+                    } else {
+                        if (elemMenu.hasClass('ouvert')) {
+                            elemMenu.removeClass('ouvert');
+                        }
+                        if (elemRestaurants.hasClass('ouvert')) {
+                            elemRestaurants.removeClass('ouvert');
+                        }
+                        if (elemReservez.hasClass('ouvert')) {
+                            elemReservez.removeClass('ouvert');
+                        }
+                        elemNav.removeClass('ouvert');
+                        $(this).removeClass('ouvert');
+                        elemBarreScroll.removeClass('menuOpen');
+                        elemHtml.removeClass('noscroll');
+                    }
                 } else {
-                    $(this).addClass('ouvert');
-                    elemNav.addClass('ouvert');
-                    elemMenu.addClass('ouvert');
                     elemBarreScroll.addClass('menuOpen');
                     elemHtml.addClass('noscroll');
+
+                    if (data === "js-restaurants") {
+                        elemRestaurants.addClass('ouvert');
+                        elemNav.addClass('ouvert');
+                    } else if (data === "js-reservez") {
+                        elemReservez.addClass('ouvert');
+                        elemNav.addClass('ouvert');
+                    } else {
+                        $(this).addClass('ouvert');
+                        elemNav.addClass('ouvert');
+                        elemMenu.addClass('ouvert');
+                    }
+
                 }
             });
+
         };
 
         ///////////////////////////////////////////////////////
