@@ -16,7 +16,6 @@
             windowWidth = $(window).width();
             windowHeight = $(window).height();
             scrollPos = $(window).scrollTop();
-            add100Vh();
             sliders();
             changeTextDoTS();
             dropdown();
@@ -28,9 +27,16 @@
             inputFile();
             navMasked();
             collapseBtn();
+            if (window.matchMedia("(min-width:993px)").matches) {
+                fixedElem();
+            }
         });
         $(window).load(function () {
+            add100Vh();
             woow();
+            if (window.matchMedia("(min-width:993px)").matches) {
+                scrollEtapeActive();
+            }
         });
 
         $(window).resize(function () {
@@ -40,6 +46,78 @@
             sliders();
             changeTextDoTS();
         });
+
+        ///////////////////////////////////////////////////////
+        /* ETAPES */
+        ///////////////////////////////////////////////////////
+
+
+        function scrollEtapeActive() {
+            var windowHeight = $(window).height();
+            var windowHeightdiv2 = windowHeight / 2;
+
+            $(".etape-part").each(function (index) {
+                var elementPos = $(this).offset().top;
+                var element = $(this);
+
+                $(window).on('window-scroll', function (event, a) {
+                    var scroll = a;
+
+                    if (scroll + (windowHeight - windowHeightdiv2) > elementPos) {
+                        var idCalcItem = $(element).data("part");
+                        var elemenPrev = $(element).prev();
+                        var img = $('.fixed-elem .img[data-part="' + idCalcItem + '"]');
+                        img.addClass("active");
+                        element.addClass("active");
+                        elemenPrev.removeClass("active");
+                        $(".fixed-elem").addClass(idCalcItem);
+                        var idCalcItemPrev = $(element).prev().data("part");
+                        $(".fixed-elem").removeClass(idCalcItemPrev);
+                    } else if (scroll < windowHeight) {
+                        var idCalcItem = $(element).data("part");
+                        var img = $('.fixed-elem .img[data-part="' + idCalcItem + '"]');
+                        element.removeClass("active");
+                        img.removeClass("active");
+                        $(".fixed-elem").removeClass(idCalcItem);
+                    } else {
+                        var idCalcItem = $(element).data("part");
+                        var img = $('.fixed-elem .img[data-part="' + idCalcItem + '"]');
+                        element.removeClass("active");
+                        img.removeClass("active");
+                        $(".fixed-elem").removeClass(idCalcItem);
+                    }
+
+                });
+
+            })
+        };
+
+        ///////////////////////////////////////////////////////
+        /* fixedElem */
+        ///////////////////////////////////////////////////////
+
+        function fixedElem() {
+            var container = $(".fixed-elem-wrapper");
+            if (container.length) {
+                var elem = $(".fixed-elem");
+                var elemHeight = $(elem).height();
+                var addFixed = $(container).offset().top;
+                var containerBottom = addFixed + $(container).outerHeight();
+                var stopFixed = containerBottom - elemHeight;
+
+                $(window).on('window-scroll', function (event, a) {
+                    var scroll = a;
+                    if (scroll > addFixed && scroll < stopFixed) {
+                        elem.addClass("fixed");
+                        elem.removeClass("absolute-end");
+                    } else if (scroll > stopFixed) {
+                        elem.addClass("absolute-end");
+                    } else {
+                        elem.removeClass("fixed");
+                    }
+                });
+            }
+        }
 
         ///////////////////////////////////////////////////////
         /* bouton collapse */
@@ -502,7 +580,7 @@
         function inputFile() {
             $('.c-formulaire_file').each(function () {
                 var element = $(this),
-                    fileName = element.find('label'),
+                    fileName = element.find('label span'),
                     inputElement = element.find('input[type=file]');
                 if (element.hasClass('multiple')) {
                     inputElement.on('change', function () {

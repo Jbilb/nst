@@ -40,8 +40,6 @@ include 'includes/header.php';
                         <div class="content">
                             <h2 class="h3 rose center content_title">Nous vous<br> attendons ! </h2>
                             <div class="content_bloc">
-                                <p class="semi-bold beige center">Tous les jours
-                                </p>
                                 <p class="beige center"><?=$restaurants[$city]['schedule'];?></p>
                             </div>
                             <div class="content_bloc">

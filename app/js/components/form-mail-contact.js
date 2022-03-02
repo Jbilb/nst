@@ -64,6 +64,7 @@
         if (formState) {
             // Affichage du loader lors du submit
             function anim() {
+                $(formId).css("pointer-events", "none");
                 $(formId).animate({
                     opacity: 0,
                 }, 600);

@@ -16,7 +16,8 @@
                                 Découvrez <br>Don Camillo
                             </h2>
                             <div class="bloc_trait center">
-                                <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
+                                <div class="s-trait" style="--traitColor: #E39077;">
+                                    <span><?php include "img/svg/tiret.svg";?></span></div>
                             </div>
                             <ul class="bloc_nav">
                                 <li>
@@ -47,7 +48,8 @@
                                 Réservez <br>votre table !
                             </h2>
                             <div class="bloc_trait center">
-                                <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
+                                <div class="s-trait" style="--traitColor: #E39077;">
+                                    <span><?php include "img/svg/tiret.svg";?></span></div>
                             </div>
                             <ul class="bloc_nav">
                                 <li>
@@ -75,10 +77,11 @@
                                 Don Camillo<br class="keep"> <?=$restaurants[$city]['name'];?>
                             </h2>
                             <div class="bloc_trait center">
-                                <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
+                                <div class="s-trait" style="--traitColor: #E39077;">
+                                    <span><?php include "img/svg/tiret.svg";?></span></div>
                             </div>
                             <div class="bloc_horaires">
-                                <p class="blanc center">À votre service <br class="keep">tous les jours
+                                <p class="blanc center">À votre service
                                     <br class="keep"><?=$restaurants[$city]['schedule'];?>
                                 </p>
                             </div>
@@ -101,11 +104,12 @@
                                 Don Camillo<br class="keep"> <?=$restaurants[$city]['name'];?>
                             </h2>
                             <div class="bloc_trait center">
-                                <div class="s-trait" style="--traitColor: #E39077;"><span></span></div>
+                                <div class="s-trait" style="--traitColor: #E39077;">
+                                    <span><?php include "img/svg/tiret.svg";?></span></div>
                             </div>
                             <div class="bloc_horaires">
-                                <p class="blanc center">À votre service <br class="keep">tous les jours
-                                    <br class="keep"><?=$restaurants[$city]['schedule'];?>
+                                <p class="blanc center">À votre service <br
+                                        class="keep"><?=$restaurants[$city]['schedule'];?>
                                 </p>
                             </div>
                             <div class="bloc_adresses">
@@ -181,6 +185,19 @@
     </div>
     </div>
     <!-- END WRAPPER OVERSCROLLBAR-->
+    <!-- GOOGLE MAPS API (MULTIPOINTS) -->
+    <?php if($PAGE_name == "contact") {
+           include_once 'js/components/multimap.class.php';
+           $map = new Multimap('map-restaurant',10,[43.188138277105374, 1.501272900870296, 42.93756425138058, 1.8523339533189136]);
+           foreach($DATA_restaurants as $restaurant => $value) {
+               $html = '<div class="center"><p class="bulle-map center"><p class="center bold rose">Restaurant '.$value['name'].'</p><a href="'.$value['url'].'" class="bouton" title="Découvrez le restaurant Don Camillo de '.$value['name'].'"><span>Découvrir</span></a></p></div>';
+               $lat = $value['lat'];
+               $long = $value['long'];
+               $map->setMarker($html,$lat,$long);
+           }
+           echo $map->createMap();
+    }
+    ?>
     </body>
 
     </html>

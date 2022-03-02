@@ -1,4 +1,22 @@
 .legals {
+
+    #wrapper {
+        background-color: $beige;
+        padding-top: 15rem;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 130px;
+        }
+    }
+
+    #section-top {
+        padding-bottom: 15rem;
+    }
+
+    .p-header {
+        display: none;
+    }
+
     &_titre {
         margin-bottom: 6rem;
     }
@@ -14,9 +32,11 @@
     }
 
     &_subtitle {
-        color: $noir;
+        display: block;
+        color: $rose;
         font-size: 18px;
-        margin-top: 30px;
+        margin-top: 60px;
+        margin-bottom: 20px;
 
         @media (min-width:$screen-md) {
             font-size: 24px;

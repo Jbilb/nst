@@ -15,19 +15,280 @@
         position: relative;
         overflow: hidden;
 
+        @media screen and (max-width:$screen-md) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
         &_etape {
             position: relative;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            z-index: 1;
+
+            @media screen and (max-width:$screen-md) {
+                min-height: auto;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            &_img {
+                width: 100%;
+                margin-bottom: 50px;
+
+                @media screen and (min-width:$screen-md) {
+                    display: none;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
 
             &_title {
                 margin-bottom: 3.125vw;
+
+                @media screen and (max-width:$screen-md) {
+                    margin-bottom: 30px;
+                    font-size: 30px;
+                }
             }
 
             &_subtitle {
                 margin-bottom: 2vw;
+
+                @media screen and (max-width:$screen-md) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &_pizzas {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: auto;
+            left: 0;
+            z-index: 0;
+            background-color: $beige;
+
+            @media screen and (max-width:$screen-md) {
+                display: none;
+            }
+
+
+            [class^="illustration-"],
+            [class*=" illustration-"] {
+                position: absolute;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                &.illustration-laurier {
+                    width: 24.21vw;
+                    top: 18vw;
+                    left: -13vw;
+                }
+
+                &.illustration-roulette {
+                    width: 24.21vw;
+                    top: 3.125vw;
+                    right: -8vw;
+                }
+
+            }
+
+            .content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                height: 100vh;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .fond {
+                    width: 100%;
+                    position: relative;
+                    z-index: 0;
+                    transform: scale(.8)rotate(25deg);
+                    opacity: 0;
+                    transition: all .3s ease;
+                }
+
+                .img {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%)translateY(-50%);
+                    opacity: 0;
+                    z-index: 1;
+                    transition: all .3s ease;
+
+                    &.active {
+                        opacity: 1;
+                        z-index: 1;
+                        transition: all .3s ease .2s;
+                    }
+                }
+            }
+
+            &.fixed {
+                position: fixed;
+                top: auto;
+                bottom: 0;
+            }
+
+            &.absolute-end {
+                position: absolute;
+                top: auto;
+                bottom: 0;
+            }
+
+            &[class^="part-"],
+            &[class*=" part-"] {
+
+                .content {
+                    .fond {
+                        transform: scale(1)rotate(0);
+                        opacity: 1;
+                        transition: all .3s ease;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .rejoindre-storie {
+        position: relative;
+        overflow: hidden;
+        padding-top: 10.9vw;
+        padding-bottom: 10.6vw;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 130px;
+            padding-bottom: 80px;
+        }
+
+        .c-lisere {
+            @media screen and (max-width:$screen-md) {
+                display: none;
+            }
+        }
+
+        .row-flex {
+            @media screen and (min-width:$screen-md) {
+                display: flex;
+            }
+        }
+
+        .illustration {
+            position: absolute;
+            top: -9.375vw;
+            left: -13vw;
+            width: 43.2vw;
+
+            @media screen and (max-width:$screen-md) {
+                top: -140px;
+                left: -170px;
+                width: 430px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &_title {
+            margin-bottom: 4vw;
+
+            @media screen and (max-width:$screen-md) {
+                margin-bottom: 50px;
+            }
+        }
+
+        &_item {
+            padding-left: 4.94vw;
+            padding-right: 4.94vw;
+            padding-top: 4.94vw;
+            padding-bottom: 4.5vw;
+            height: 100%;
+
+            @media screen and (max-width:$screen-md) {
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                margin-bottom: 30px;
+            }
+
+            &_title {
+                margin-bottom: 2.34vw;
+
+                @media screen and (max-width:$screen-md) {
+                    margin-bottom: 30px;
+                    font-size: 25px;
+                    text-align: center;
+                }
+            }
+
+            p {
+                @media screen and (max-width:$screen-md) {
+                    text-align: center;
+                }
+            }
+        }
+
+        &_bouton {
+            margin-top: 4vw;
+        }
+    }
+
+    .rejoindre-contact {
+        overflow: hidden;
+        position: relative;
+        padding-top: 11.45vw;
+        padding-bottom: 13.5vw;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 220px;
+            padding-bottom: 80px;
+        }
+
+        &_title {
+            margin-bottom: 4vw;
+
+            @media screen and (max-width:$screen-md) {
+                margin-bottom: 70px;
+            }
+        }
+
+        .illustration {
+            position: absolute;
+            top: -5vw;
+            right: -8.33vw;
+            width: 28vw;
+
+            @media screen and (max-width:$screen-md) {
+                top: -120px;
+                right: -90px;
+                width: 278px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
             }
         }
     }

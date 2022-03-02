@@ -21,11 +21,12 @@
                     </div>
                     <div class="c-restaurants_content_item">
                         <div class="content">
-                            <h3 class="h3 center rose uppercase content_title">RESTAURANT Foix</h3>
-                            <h4 class="h4 center medium beige content_subtitle">et son offre afterwork</h4>
+                            <h3 class="h3 center rose uppercase content_title">RESTAURANT PamIers</h3>
+                            <h4 class="h4 center medium beige content_subtitle">et son rooftop Dolce Vita</h4>
                             <div class="content_bouton center">
-                                <a href="<?php echo $NAV_restaurant_foix; ?>"
-                                    title="<?php echo $NAV_TITLE_restaurant_foix; ?>" class="bouton bg0-white-brRose">
+                                <a href="<?php echo $NAV_restaurant_pamiers; ?>"
+                                    title="<?php echo $NAV_TITLE_restaurant_pamiers; ?>"
+                                    class="bouton bg0-white-brRose">
                                     <span>DÉCOUVRIR</span>
                                 </a>
                             </div>

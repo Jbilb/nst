@@ -1,18 +1,49 @@
+$colorForm : var(--colorForm);
+$borderForm : var(--borderForm);
+
 .c-formulaire {
     position: relative;
-    overflow: hidden;
+
+    .row {
+        &:nth-child(1) {
+            z-index: 10;
+        }
+
+        &:last-child {
+            margin-top: 3rem;
+
+            @media screen and (max-width:$screen-md) {
+                margin-top: 20px;
+            }
+        }
+    }
 
     &_field {
         position: relative;
+        margin-bottom: 2rem;
 
-        &+& {
-            margin-top: 30px;
+        @media screen and (max-width:$screen-md) {
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            margin-bottom: 1rem;
+            color: $colorForm;
+            font-weight: $medium;
+            line-height: 1.2;
+
+            @media screen and (max-width:$screen-md) {
+                margin-bottom: 5px;
+            }
         }
 
         .form-radio {
             position: relative;
-            padding-left: 30px;
-            margin-bottom: 10px;
+            padding-left: 5rem;
+
+            @media screen and (max-width:$screen-md) {
+                padding-left: 50px;
+            }
 
             input[type=radio],
             input[type=checkbox] {
@@ -25,19 +56,24 @@
             label {
                 display: inline-block;
                 font-family: $font;
-                font-size: 12px;
-                line-height: 17px;
-                font-weight: normal;
-                color: $noir;
+                font-size: 1.3rem;
+                line-height: 1.4;
+                font-weight: $medium;
+                color: $colorForm;
                 cursor: pointer;
                 margin: 0;
+
+                @media screen and (max-width:$screen-md) {
+                    font-size: 11px;
+                }
 
                 &:after {
                     display: block;
                     content: '';
-                    width: 20px;
-                    height: 20px;
-                    border: solid 2px $noir;
+                    width: 2.6rem;
+                    height: 2.6rem;
+                    background-color: $blanc;
+                    border-radius: 100%;
                     position: absolute;
                     left: 0;
                     top: 0;
@@ -45,22 +81,34 @@
                     margin: auto;
                     z-index: 1;
                     transition: all .2s ease;
+
+                    @media screen and (max-width:$screen-md) {
+                        width: 26px;
+                        height: 26px;
+                    }
                 }
 
                 &:before {
                     display: block;
                     content: '';
-                    width: 12px;
-                    height: 12px;
-                    background: $noir;
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    background: $rose;
+                    border-radius: 100%;
                     position: absolute;
-                    left: 4px;
+                    left: .6rem;
                     top: 0;
                     bottom: 0;
                     z-index: 2;
                     margin: auto;
                     transition: all .2s ease;
                     opacity: 0;
+
+                    @media screen and (max-width:$screen-md) {
+                        width: 14px;
+                        height: 14px;
+                        left: 6px;
+                    }
                 }
             }
 
@@ -73,27 +121,27 @@
         }
 
         ::-webkit-input-placeholder {
-            color: $noir;
+            color: $colorForm;
             opacity: 1;
         }
 
         ::-moz-placeholder {
-            color: $noir;
+            color: $colorForm;
             opacity: 1;
         }
 
         ::-ms-placeholder {
-            color: $noir;
+            color: $colorForm;
             opacity: 1;
         }
 
         ::-ms-input-placeholder {
-            color: $noir;
+            color: $colorForm;
             opacity: 1;
         }
 
         :-ms-input-placeholder {
-            color: $noir;
+            color: $colorForm;
             opacity: 1;
         }
 
@@ -103,20 +151,23 @@
         textarea {
             width: 100%;
             transition: all .5s ease;
-            border: solid 2px $noir;
-            color: $noir;
+            border: 1px solid $borderForm;
+            color: $colorForm;
+            font-weight: $medium;
             font-size: 14px;
             padding: 0 15px;
+            border-radius: 24px;
             height: 50px;
 
-            &:focus {
-                background: rgba(255, 255, 255, .15);
+            @media (min-width:$screen-md) {
+                border-radius: 2.4rem;
+                font-size: 1.6rem;
+                height: 4.5rem;
+                padding: 0 2rem;
             }
 
-            @media (min-width:$screen-lg) {
-                font-size: 16px;
-                height: 7rem;
-                padding: 0 20px;
+            &:focus {
+                background-color: $borderForm;
             }
         }
 
@@ -124,40 +175,42 @@
             padding-top: 10px;
             height: 180px;
 
-            @media(min-width:$screen-lg) {
-                height: calc(21rem + 30px);
+            @media(min-width:$screen-md) {
+                height: 24.3rem;
                 padding-top: 15px;
             }
         }
 
         .dropdown-toggle {
-            display: inline-block;
-            vertical-align: middle;
+            width: 100%;
+            display: block;
             position: relative;
 
             .dropdown-toggle-btn {
-                display: inline-flex;
+                display: flex;
                 align-items: center;
                 justify-content: flex-start;
-                min-width: 190px;
+                width: 100%;
                 vertical-align: middle;
                 transition: all .5s ease 0s;
-                border: solid 1px $noir;
-                color: $noir;
+                border: solid 1px $borderForm;
+                color: $colorForm;
                 font-size: 14px;
-                height: 8rem;
-                max-height: 60px;
-                padding: 0 42px 0 15px;
                 position: relative;
+                font-size: 14px;
+                padding: 0 15px;
+                border-radius: 24px;
+                height: 50px;
 
-                @media (min-width:$screen-lg) {
-                    font-size: 16px;
+                @media (min-width:$screen-md) {
+                    border-radius: 2.4rem;
+                    font-size: 1.6rem;
+                    height: 4.5rem;
+                    padding: 0 2rem;
                 }
 
                 &:focus {
-                    color: $blanc;
-                    background: $noir;
-                    border-color: $noir;
+                    background-color: $borderForm;
                 }
 
                 .icon-cursor {
@@ -173,10 +226,11 @@
             }
 
             ul.dropdown {
-                @include position(absolute, 2, 100%, 0, auto, 0);
-                background: $noir;
+                @include position(absolute, 2, calc(100% + 10px), 0, auto, 0);
+                background: $rose;
                 overflow: hidden;
                 max-height: 0;
+                border-radius: 2.5rem;
                 transition: all .5s ease;
                 font-size: 14px;
 
@@ -186,7 +240,7 @@
 
                 li {
                     max-height: 0;
-                    padding: 0 15px;
+                    padding: 0 20px;
                     line-height: 50px;
                     transition: all .5s ease;
                     color: $blanc;
@@ -229,7 +283,9 @@
             height: 15px;
             margin: 5px;
             content: attr(data-message);
-            color: $gris;
+            color: $rose;
+            font-weight: $bold;
+            font-family: $font;
             opacity: 1;
             font-size: 11px;
             line-height: 15px;
@@ -241,6 +297,17 @@
 
     // FORM FILE UPLOAD
     &_file {
+        margin-bottom: 0;
+        margin-right: 1.5vw;
+        max-width: 50%;
+        overflow: hidden;
+
+        @media screen and (max-width:$screen-md) {
+            max-width: 200px;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
         input[type=file] {
             opacity: 0;
             width: 0;
@@ -250,26 +317,19 @@
         }
 
         label {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: $noir;
+            @extend .bouton;
+            max-width: 100%;
+            background: $colorForm;
             color: $blanc;
+            border-radius: 1rem;
             cursor: pointer;
-            height: 40px;
-            padding: 0 20px;
-            font-size: 14px;
 
-            @media (min-width:$screen-sm) {
-                font-size: 15px;
-                padding: 0 25px;
-                height: 50px;
-            }
-
-            @media (min-width:$screen-lg) {
-                font-size: 16px;
-                padding: 0 30px;
-                height: 60px;
+            span {
+                display: block;
+                max-width: 150px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
 
             &:after,
@@ -277,6 +337,21 @@
                 content: normal;
                 display: none;
             }
+
+            &:hover {
+                background-color: $rose;
+                transition: all .3s ease;
+            }
+        }
+    }
+
+    &_boutons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @media screen and (max-width:$screen-md) {
+            flex-direction: column;
         }
     }
 
@@ -318,7 +393,7 @@
             p {
                 line-height: 1.33;
                 text-align: center;
-                color: $noir;
+                color: $rose;
                 font-weight: 600;
                 font-size: 16px;
                 padding: 5vw 30px;
