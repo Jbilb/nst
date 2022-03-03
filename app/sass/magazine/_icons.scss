@@ -1,58 +1,65 @@
 @font-face {
-  font-family: 'icomoon-mag';
-  src:  url('../fonts/icomoon-mag.eot?zbnyeh');
-  src:  url('../fonts/icomoon-mag.eot?zbnyeh#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon-mag.ttf?zbnyeh') format('truetype'),
-    url('../fonts/icomoon-mag.woff?zbnyeh') format('woff'),
-    url('../fonts/icomoon-mag.svg?zbnyeh#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+    font-family: 'icomoon-mag';
+    src: url('../fonts/icomoon-mag.eot?zbnyeh');
+    src: url('../fonts/icomoon-mag.eot?zbnyeh#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon-mag.ttf?zbnyeh') format('truetype'),
+        url('../fonts/icomoon-mag.woff?zbnyeh') format('woff'),
+        url('../fonts/icomoon-mag.svg?zbnyeh#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+[class^="icon-"],
+[class*=" icon-"] {
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-mag-arrow-bottom:before {
     font-family: 'icomoon-mag' !important;
     content: "\e900";
 }
+
 .icon-mag-arrow-plain:before {
     font-family: 'icomoon-mag' !important;
     content: "\e901";
 }
+
 .icon-mag-comment:before {
     font-family: 'icomoon-mag' !important;
     content: "\e970";
 }
+
 .icon-mag-facebook:before {
     font-family: 'icomoon-mag' !important;
     content: "\ea90";
 }
+
 .icon-mag-twitter:before {
     font-family: 'icomoon-mag' !important;
     content: "\ea96";
 }
+
 .icon-mag-linkedin:before {
     font-family: 'icomoon-mag' !important;
     content: "\eaca";
 }
+
 .icon-mag-pdf:before {
     font-family: 'icomoon-mag' !important;
     content: "\eadf";
 }
+
 .icon-mag-reinit:before {
     font-family: 'icomoon-mag' !important;
     content: "\e984";
 }
-

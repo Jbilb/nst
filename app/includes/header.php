@@ -42,13 +42,6 @@
 <?php include 'includes/head.php'; ?>
 
 <body id="top-page" class="<?php echo $PAGE_name; ?>">
-    <div class="c-transition <?php echo $classAnimation; ?>">
-        <div class="c-transition_wrapper">
-            <div class="c-transition_wrapper_sigle">
-                <img src="" alt="">
-            </div>
-        </div>
-    </div>
     <?php
         include 'includes/nav.php';
         include 'includes/menu.php';

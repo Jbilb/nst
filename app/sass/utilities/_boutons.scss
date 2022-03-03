@@ -127,4 +127,20 @@
             }
         }
     }
+
+    &.v-vert {
+        background-color: $vert;
+
+        &::after {
+            background-color: $rose;
+        }
+
+        &:hover {
+
+            @media screen and (min-width:$screen-md) {
+                background-color: transparent;
+                color: $blanc;
+            }
+        }
+    }
 }

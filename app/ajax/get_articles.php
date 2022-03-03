@@ -42,38 +42,42 @@
             foreach($articles_list as $article)
             {
     ?>
-            <div class="c-article c-article--card inactive" data-article data-date="<?=$article->date_publication()?>" data-reads="<?=$article->lectures()?>">
-                <a href="<?=$NAV_mag_article.$article->slug()?>">
-                    <figure class="c-article__img">
-                        <img src="<?=$article->cover_image()?>" alt="<?=$article->title()?>">
-                    </figure>
-                    <div class="c-article__infos">
-                        <p class="c-article__date">
-                            <?=$article->date_publication()?>
-                        </p>
-                        <p class="c-article__category">
-                            <?=$CategorieManager->getName($article->id_categorie())?>
-                        </p>
-                        <h2 class="c-article__title"><?=$article->title()?></h2>
-                    </div>
-
-                </a>
+<div class="c-article c-article--card inactive" data-article data-date="<?=$article->date_publication()?>"
+    data-reads="<?=$article->lectures()?>">
+    <a href="<?=$NAV_mag_article?><?=$article->slug()?>">
+        <figure class="c-article__img">
+            <img src="<?=$article->cover_image()?>" alt="<?=$article->title()?>">
+        </figure>
+        <div class="c-article__infos">
+            <div>
+                <p class="c-article__date">
+                    <?=$article->date_publication()?>
+                </p>
+                <p class="c-article__category">
+                    <?=$CategorieManager->getName($article->id_categorie())?>
+                </p>
+                <h2 class="c-article__title"><?=$article->title()?></h2>
             </div>
-    <?php
+            <div><button class="bouton bg0-white-brvert"><span>Lire la suite</span></button></div>
+        </div>
+    </a>
+</div>
+<?php
             }
         }
         else
         {
     ?>
-            <div class="col-xs-12">
-                <p class="c-articles c-articles--no-articles">
-                    Aucun article disponible.
-                </p>
-            </div>
-    <?php
+<div class="col-xs-12">
+    <p class="c-articles c-articles--no-articles">
+        Aucun article disponible.
+    </p>
+</div>
+<?php
         }        
     }
 ?>
-            <div class="col-xs-12 c-articles_see-more">
-                <button class="c-articles_see-more_button hidden" data-show-cards>Voir plus</button>
-            </div>
+<div class="col-xs-12 c-articles_see-more">
+    <button class="c-articles_see-more_button bouton hidden" data-show-cards><span>Voir
+            plus</span></button>
+</div>

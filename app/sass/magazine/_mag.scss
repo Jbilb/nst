@@ -1,36 +1,99 @@
 .mag {
-    
-    &_content {
-        @include position(relative,5);
-        padding-top:7rem;
-        padding-bottom:10rem;
-        &_title {
-            margin-bottom:5rem;
-            font-size:4.5rem;
-            @extend %font-bold;
-            color:$noir;
-            &_sub {
-                display:block;
-                margin-top:10px;
-                font-size:50%;
-                color:$gris;
-                @extend %font-bold;
+
+    .p-header {
+        display: none;
+    }
+
+    .p-nav.masked:not(.ouvert) {
+        .p-nav {
+            &_content {
+
+                &_logo {
+
+                    svg {
+
+                        #Groupe_3830 {
+                            path {
+                                fill: $vert;
+                                transition: all .3s ease;
+                            }
+                        }
+
+                        #Groupe_3831 {
+                            path {
+                                fill: $rose;
+                                transition: all .3s ease;
+                            }
+                        }
+                    }
+                }
+
+                &_link {
+                    color: $vert;
+                    transition: color .3s ease;
+
+                    &:hover {
+                        color: $vert;
+                        transition: color .3s ease;
+                    }
+                }
+
+                &_burger {
+
+                    .content {
+
+                        .barre {
+
+                            &:nth-child(1),
+                            &:nth-child(3) {
+                                background: $vert;
+                                transition: all .3s ease;
+                            }
+
+                            &:nth-child(2) {
+
+                                &::after,
+                                &::before {
+                                    background: $vert;
+                                    transition: all .3s ease;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-        &:after {
-            @include position(absolute,10,0,0,auto,0);
-            display:block;
-            content:'';
-            background:rgba(0,0,0,.75);
-            transition:all .3s ease-out 0s, height .1s ease-out .3s;
-            height:0;
-            opacity:0;
+    }
+
+    #section-top {
+        margin-top: 0;
+    }
+
+
+    &_content {
+        background-color: $beige;
+        @include position(relative, 5);
+        padding-top: 12vw;
+        padding-bottom: 10rem;
+
+        @media screen and (max-width:$screen-md) {
+            padding-top: 180px;
+            padding-bottom: 80px;
         }
-        &.overlay {
-            &:after {
-                height:100%;
-                opacity:1;
-                transition:opacity .3s ease-out 0s;
+
+        &_title {
+            margin-bottom: 5rem;
+            font-size: 4.5rem;
+            @extend %font-bold;
+            font-family: $font;
+            color: $rose;
+
+            &_sub {
+                display: block;
+                margin-top: 10px;
+                font-size: 50%;
+                color: $gris;
+                @extend %font-bold;
             }
         }
     }
