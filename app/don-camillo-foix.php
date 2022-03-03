@@ -152,7 +152,8 @@ include 'includes/header.php';
                             data-woow-offset="70">
                             Consultez notre carte pour connaître notre sélection de plats à emporter.</p>
                         <div class="container-bouton anim-opacity woow" data-woow-toggle="true" data-woow-offset="70">
-                            <a href="" class="p-nav_content_bouton bouton bg0-white-brvert">
+                            <a href="<?php echo $NAV_page_carte; ?>" title="<?php echo $NAV_TITLE_page_carte; ?>"
+                                class="p-nav_content_bouton bouton bg0-white-brvert">
                                 <span>LA CARTE</span>
                             </a>
                         </div>

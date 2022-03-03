@@ -177,7 +177,8 @@ include 'includes/header.php';
                 <div class="col-xs-12">
                     <div class="rejoindre-storie_bouton center anim-opacity woow" data-woow-toggle="true"
                         data-woow-offset="90">
-                        <a href="" class="bouton bg0-white-brRose">
+                        <a href="<?php echo $NAV_page_rejoindre; ?>" title="<?php echo $NAV_TITLE_page_rejoindre; ?>"
+                            class="bouton bg0-white-brRose">
                             <span>Rejoignez la famille</span>
                         </a>
                     </div>
