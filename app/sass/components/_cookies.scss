@@ -1,85 +1,99 @@
 .u-banner-cookies {
-    background-color: $blanc;
     position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateY(170%)translateX(-50%);
+    bottom: 30px;
+    left: 30px;
+    transform: translateY(170%);
     z-index: 100000;
     overflow: hidden;
     opacity: 0;
     transition: all .5s ease .25s;
 
     @media screen and (max-width:$screen-md) {
-        width: calc(100% - 30px);
         bottom: 15px;
         left: 15px;
     }
 
     &_content {
-        padding: 2rem;
+        width: 40rem;
+        background-color: $beige;
+        padding: 3rem 3rem;
         display: flex;
+        flex-direction: column;
 
         @media screen and (max-width:$screen-md) {
+            width: calc(100vw - 30px);
             padding: 15px;
             display: block;
+        }
+
+        p {
+            font-size: 1.4rem;
+
+            @media screen and (max-width:$screen-md) {
+                font-size: 14px;
+            }
         }
     }
 
     .bot {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        margin-left: 30px;
+        justify-content: flex-start;
 
         @media screen and (max-width:$screen-md) {
-            margin-top: 15px;
+            justify-content: space-between;
+        }
+
+        .bouton {
+            min-width: 13rem;
+            padding: 0 2rem;
+            height: 3.5rem;
+            font-size: 1.3rem;
+            margin-right: 3rem;
+
+            @media screen and (max-width:$screen-md) {
+                width: calc(50% - 5px);
+                min-width: 0;
+                font-size: 14px;
+                height: 35px;
+                margin: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                color: $vert;
+            }
+        }
+
+        @media screen and (max-width:$screen-md) {
             width: 100%;
             margin-left: 0;
             flex-direction: row;
-
-            .bouton{
-                width: calc(50% - 5px);
-                min-width: 0;
-                margin: 0;
-
-                .text{
-                    font-size: 10px;
-                    width: calc(100% - 40px);
-                }
-
-                .carre{
-                    width: 40px;
-
-                    .icon-main{
-                        @include icon(20px);
-                    }
-                }
-            }
         }
     }
 
-    p {
-        font-size: 1.6rem;
-        color: $noir;
-        line-height: normal !important;
+    &_parametre {
+        font-family: $font;
+        font-weight: $bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $rose;
+        text-align: left;
+        margin-top: 2rem;
+        text-decoration: underline;
+        margin-bottom: 2rem;
 
         @media screen and (max-width:$screen-md) {
-            font-size: 12px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
-
-        span {
-            display: block;
-            margin-bottom: 1rem;
-        }
-    }
-
-    &_close {
-        margin-bottom: 15px;
     }
 
     &.active {
-        transform: translateY(0)translateX(-50%);
+        transform: translateY(0);
         opacity: 1;
 
         @media screen and (max-width:$screen-md) {
@@ -412,7 +426,7 @@ div#tarteaucitronServices {
 }
 
 #tarteaucitron a {
-    color: $noir;
+    color: $vert;
     font-size: 11px;
     font-weight: $regular;
     text-decoration: none;
@@ -467,7 +481,7 @@ span.tarteaucitronH3 {
 }
 
 #tarteaucitronRoot * {
-    color: $noir;
+    color: $vert;
     background-color: $blanc;
 }
 
@@ -475,7 +489,7 @@ span.tarteaucitronH3 {
     font-size: 3rem;
     font-weight: $bold;
     text-align: center;
-    color: $noir;
+    color: $vert;
     margin: 0 25px;
     margin-bottom: 4rem;
 
@@ -488,7 +502,7 @@ span.tarteaucitronH3 {
 #tarteaucitronRoot .tarteaucitronH2 {
     display: inline-block;
     margin: 12px 0 0 10px;
-    color: $noir;
+    color: $vert;
 }
 
 // Background de l'overlay
@@ -536,7 +550,7 @@ span.tarteaucitronH3 {
 
 // Bouton de fermeture de la modale
 #tarteaucitron #tarteaucitronClosePanel {
-    background: $noir;
+    background: $vert;
     color: #fff;
     cursor: pointer;
     font-size: 12px;
@@ -571,7 +585,7 @@ span.tarteaucitronH3 {
     padding: 5px 20px;
     text-align: left;
     width: 100%;
-    background: $noir;
+    background: $vert;
 }
 
 // Texte affiché au clic sur une catégorie (exemple "Mesure d'audience")
@@ -646,24 +660,27 @@ span.tarteaucitronH3 {
 #tarteaucitron #tarteaucitronServices .tarteaucitronLine .tarteaucitronAsk .tarteaucitronAllow,
 #tarteaucitron #tarteaucitronServices .tarteaucitronLine .tarteaucitronAsk .tarteaucitronDeny {
     background: transparent;
-    border: 2px solid $noir;
-    color: $noir;
+    border: 2px solid $vert;
+    color: $vert;
     font-family: $font;
     font-weight: $bold;
     text-transform: uppercase;
     font-size: 1.2rem;
-    height: 5rem;
-    width: 120px;
+    border-radius: 2.5rem;
+    height: 4rem;
+    width: 16rem;
     margin: 10px;
     cursor: pointer;
 
     &:hover {
-        background-color: $noir;
+        background-color: $vert;
         color: $blanc;
     }
 
     @media screen and (max-width:$screen-md) {
-        height: 50px;
+        height: 40px;
+        width: 120px;
+        border-radius: 25px;
         font-size: 12px;
     }
 }
@@ -715,7 +732,7 @@ span.tarteaucitronH3 {
 // Titre des cookies (exemple : Google Analytics (gtag.js))
 #tarteaucitron .tarteaucitronH3 {
     font-size: 18px;
-    color: $noir !important;
+    color: $vert !important;
 }
 
 // Texte d'introduction de la modale (border top et bottom)
@@ -729,9 +746,9 @@ div#tarteaucitronInfo {
     font-size: 12px !important;
     border-bottom: 1px solid;
     border-top: 1px solid;
-    border-color: $noir;
+    border-color: $vert;
     line-height: 1.4 !important;
-    background-color: $noir !important;
+    background-color: $vert !important;
 }
 
 // Boutons non actifs

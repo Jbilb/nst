@@ -151,20 +151,21 @@
     </footer>
     <div class="u-banner-cookies">
         <div class="u-banner-cookies_content">
-            <p class="bleuFonce">En poursuivant votre navigation sur ce site,<br> vous
-                acceptez que nous utilisions<br> des cookies pour mesurer l'audience de notre site.</p>
+            <p class="vert">En poursuivant votre navigation sur ce site, vous
+                acceptez que nous utilisions des cookies pour mesurer l'audience de notre site.</p>
+
+            <button onclick="tarteaucitron.userInterface.openPanel();" class="u-banner-cookies_parametre"
+                data-accept-cookies>
+                paramètres
+            </button>
             <div class="bot">
                 <button onclick="tarteaucitron.userInterface.respondAll(false);"
-                    class="u-banner-cookies_parametre bouton" data-accept-cookies>
-                    Tout refuser
+                    class="u-banner-cookies_refuse bouton bg0-white-brvert" data-accept-cookies>
+                    <span>Refuser</span>
                 </button>
-                <button onclick="tarteaucitron.userInterface.openPanel();" class="u-banner-cookies_parametre bouton"
-                    data-accept-cookies>
-                    paramètres
-                </button>
-                <button onclick="tarteaucitron.userInterface.respondAll(true);" class="u-banner-cookies_close bouton"
-                    data-accept-cookies>
-                    Tout accepter
+                <button onclick="tarteaucitron.userInterface.respondAll(true);"
+                    class="u-banner-cookies_close bouton bg0-white-brvert" data-accept-cookies>
+                    <span>Accepter</span>
                 </button>
             </div>
         </div>

@@ -57,7 +57,7 @@ tarteaucitron.init({
 // *** Remplacer "YOUR-ID" par l'identifiant Google Analytics et décommenter le code ci-dessous
 // **********************************************************
 
-tarteaucitron.user.gtagUa = 'G-ID';
+tarteaucitron.user.gtagUa = 'ID';
 (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
 
 // **********************************************************

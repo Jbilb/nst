@@ -1,7 +1,83 @@
 .erreur404 {
-    .p-header {
-        &_bg {
-            background-image: url('../img/header/');
+
+    .p-header,
+    .p-footer {
+        display: none;
+    }
+
+    .erreur-header {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+
+        .container {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &_content {
+            position: relative;
+            padding-top: 11rem;
+            padding-bottom: 11rem;
+            z-index: 3;
+
+            .c-lisere {
+                @media screen and (max-width:$screen-md) {
+                    display: none;
+                }
+            }
+
+            &_title {
+                font-size: 25.5rem;
+                line-height: .9;
+
+                @media screen and (max-width:$screen-sm) {
+                    font-size: 140px;
+                }
+            }
+
+            &_subtitle {
+                margin-top: 1vw;
+                margin-bottom: 3vw;
+
+                @media screen and (max-width:$screen-sm) {
+                    margin-top: 10px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        .illustration {
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            &:nth-child(1) {
+                top: -10vw;
+                right: -5vw;
+                width: 23.9vw;
+
+                @media screen and (max-width:$screen-md) {
+                    top: -120px;
+                    right: -90px;
+                    width: 200px;
+                }
+            }
+
+            &:nth-child(2) {
+                bottom: -10vw;
+                left: 0;
+                width: 25.5vw;
+
+                @media screen and (max-width:$screen-md) {
+                    bottom: -70px;
+                    left: -20px;
+                    width: 200px;
+                }
+            }
         }
     }
 }
