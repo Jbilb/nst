@@ -108,7 +108,7 @@ class Multimap {
         {$this->boundsResize}	
     }
 </script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6IZbf0OEZcl4F2Ivpa7h65PVWXONecY4&callback=initialiser"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrM2wmgDQDjMEjjl-Yn8xaxYsoXp2Y7Js&callback=initialiser"></script>
 HTML;
 }
 
