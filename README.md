@@ -7,8 +7,7 @@ Codes du projet
 
 1. Code hébergeur (OVH / IONOS)
  
-* id : 
-* mot de passe : 
+* notre hébergeur OVH
 
 2. Code hébergement / FTP / Serveur
  
