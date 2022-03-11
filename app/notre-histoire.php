@@ -20,7 +20,8 @@ include 'includes/header.php';
                     <h2 class="h3 rose center anim-title woow" data-woow-toggle="true" data-woow-offset="80"><span>Notre
                             histoire, notre fierté</span></h2>
                     <div class="s-trait v-margeTitre v-center anim-tiret woow" data-woow-toggle="true"
-                        data-woow-offset="80" style="--traitColor: #E39077;"><span></span></div>
+                        data-woow-offset="80" style="--traitColor: #E39077;">
+                        <span><?php include "img/svg/tiret.svg";?></span></div>
                     <div class="row">
                         <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
                             <p class="center vert anim-opacity woow" data-woow-toggle="true" data-woow-offset="70">

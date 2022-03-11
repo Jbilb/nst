@@ -1,3 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.356 89.843">
-  <path id="Tracé_39674" data-name="Tracé 39674" d="M83.888,3.544H5.953L3.178.772,0,3.95,3.178,7.128,5.953,4.352H83.888l2.776,2.776L89.842,3.95,86.664.772Z" transform="translate(-0.772 89.842) rotate(-90)" fill="#e39077"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.771 123.414">
+  <g id="Groupe_4132" data-name="Groupe 4132" transform="translate(-834.937 -3142.293)">
+    <path id="Soustraction_1" data-name="Soustraction 1" d="M12075.418,4324.5v-56.546l-2.774-2.774,3.178-3.178,3.179,3.178-2.777,2.774V4324.5h-.8Z" transform="translate(-11237 -1119)" fill="#e39077" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Soustraction_2" data-name="Soustraction 2" d="M12075.418,4324.5v-56.546l-2.774-2.774,3.178-3.178,3.179,3.178-2.777,2.774V4324.5h-.8Z" transform="translate(12914.644 7527) rotate(180)" fill="#e39077" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
 </svg>

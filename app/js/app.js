@@ -422,6 +422,7 @@
         function modal() {
             $(document).on('click', '.c-formulaire_overlay', function () {
                 $(this).addClass('close');
+                location.reload();
                 setTimeout(function () {
                     $('.c-formulaire_overlay').remove();
                 }, 1000);
@@ -476,7 +477,6 @@
                     draggable: false,
                     swipeToSlide: true,
                     appendDots: '[dots-etapes]',
-                    adaptiveHeight: true
                 };
             $(slider).slick(settings);
 

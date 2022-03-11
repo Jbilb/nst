@@ -113,6 +113,8 @@
                 align-items: center;
                 justify-content: space-between;
                 padding-top: 6.7vw;
+                opacity: 0;
+                transition: all .3s ease;
 
                 @media screen and (max-width:$screen-md) {
                     padding-top: 80px;
@@ -139,7 +141,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 5rem;
+                    width: 8rem;
                     height: 0;
                     opacity: 0;
                     overflow: hidden;
@@ -150,16 +152,20 @@
                     }
 
                     .trait {
-                        display: inline-flex;
+                        display: flex;
                         align-items: center;
                         justify-content: center;
-                        flex-direction: column;
-                        width: 6px;
+                        width: 9px;
                         height: 100%;
 
                         @media screen and (max-width:$screen-md) {
                             height: 9rem;
                             transform: rotate(90deg);
+                        }
+
+                        span{
+                            display: block;
+                            width: 100%;
                         }
 
                         svg {
@@ -185,6 +191,8 @@
 
         .slick-active {
             .c-sliderEtapes_carre_slider_content {
+                opacity: 1;
+                transition: all .3s ease .2s;
 
 
                 .number-left {
@@ -195,7 +203,7 @@
 
                 .separateur {
                     opacity: 1;
-                    height: 90px;
+                    height: 150px;
                     transition: all .3s ease .4s;
 
                     @media screen and (max-width:$screen-md) {

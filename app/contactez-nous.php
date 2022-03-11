@@ -65,19 +65,9 @@ include 'includes/header.php';
                     </div>
                     <div class="col-xs-12 col-md-5 col-xl-4">
                         <div class="c-formulaire_field">
-                            <p class="subtitle">Le poste souhaité</p>
-                            <div class="dropdown-toggle">
-                                <input type="hidden" value=""
-                                    data-required="Merci de sélectionner l'objet de votre poste" name="Poste" />
-                                <button class="dropdown-toggle-btn">
-                                    <span class="txt"></span><span class="icon-cursor"></span>
-                                </button>
-                                <ul class="dropdown">
-                                    <?php foreach ($recrutement as $item => $poste) {?>
-                                    <li><button data-value="<?=$poste->title;?>"><?=$poste->title;?></button></li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
+                            <p class="subtitle">Objet</p>
+                            <input name="required_alpha_Objet" data-required="Merci d'indiquer votre objet"
+                                placeholder="" type="text">
                         </div>
                         <div class="c-formulaire_field">
                             <p class="subtitle">Nous sommes à votre écoute !</p>

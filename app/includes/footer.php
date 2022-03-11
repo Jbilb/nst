@@ -139,7 +139,9 @@
                                 title="<?php echo $LINK_TITLE_allergenes; ?>">Allergènes</a></p>
                         <p class="center paragr-small">Pour votre santé, mangez au moins cinq fruits et légumes
                             par jour.
-                            www.mangerbouger.fr - L’abus d’alcool est dangereux pour la santé, à consommer avec
+                            <a href="https://www.mangerbouger.fr/" target="_blank"
+                                title="mangerbouger.fr">www.mangerbouger.fr</a> - L’abus d’alcool est dangereux pour la
+                            santé, à consommer avec
                             modération.</p>
                     </div>
                 </div>

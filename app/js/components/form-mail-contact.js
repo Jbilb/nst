@@ -66,7 +66,7 @@
             function anim() {
                 $(formId).css("pointer-events", "none");
                 $(formId).animate({
-                    opacity: 0,
+                    opacity: 0.4,
                 }, 600);
                 setTimeout(function () {
                     $(formId).closest('div').append("<div class='c-formulaire_overlay close'><div class='c-formulaire_overlay_text'></div></div>");

@@ -1,7 +1,7 @@
 <?php 
 return $recrutement = (object) array(
     "chef_de_rang" => (object) array(
-        "title"           => "Chef·FE de rang",
+        "title"           => "Chef·fe de rang",
         "subtitle"         => "Pour vous, un restaurant, c’est comme un orchestre. Vous en êtes le Maestro et permettez à Don Camillo de réaliser ses plus belles symphonies.",
         "img"      => "sticky-pizza-01.svg",
         "img_mobile"      => "chef-de-rang-don-camillo.png",
@@ -14,7 +14,7 @@ return $recrutement = (object) array(
             ),
     ),
     "runners" => (object) array(
-        "title"           => "Runners",
+        "title"           => "Runner•euse",
         "subtitle"         => "Une table à dresser ou à débarrasser, un couvert qui tombe, une carafe qui se vide ? Rien ne vous échappe !",
         "img"      => "sticky-pizza-02.svg",
         "img_mobile"      => "runners-don-camillo.png",
@@ -27,7 +27,7 @@ return $recrutement = (object) array(
             ),
     ),
     "pizzaiolos" => (object) array(
-        "title"           => "Pizzaïolos",
+        "title"           => "Pizzaïolo",
         "subtitle"         => "Vous êtes sur le devant de la scène, alors faites valser les pâtes à pizza pour régaler les papilles de nos convives !",
         "img"      => "sticky-pizza-03.svg",
         "img_mobile"      => "pizzaiolos-don-camillo.png",
@@ -39,7 +39,7 @@ return $recrutement = (object) array(
             ),
     ),
     "grilladin" => (object) array(
-        "title"           => "Grilladin",
+        "title"           => "Grilladin•e",
         "subtitle"         => "Nous le savons, aucune viande ne vous résiste. Faites rougir nos plus belles pièces !",
         "img"      => "sticky-pizza-04.svg",
         "img_mobile"      => "grilladin-don-camillo.png",
@@ -51,7 +51,7 @@ return $recrutement = (object) array(
             ),
     ),
     "patissier" => (object) array(
-        "title"           => "Pâtissier",
+        "title"           => "Pâtissier•ère",
         "subtitle"         => "Vous êtes la cerise sur le gâteau : avec vous, une soirée chez Don Camillo ne peut que bien se terminer.",
         "img"      => "sticky-pizza-05.svg",
         "img_mobile"      => "patissier-don-camillo.png",
@@ -63,7 +63,7 @@ return $recrutement = (object) array(
             ),
     ),
     "barman" => (object) array(
-        "title"           => "Barman",
+        "title"           => "Barman•aid",
         "subtitle"         => "Sachez-le, on se souvient toujours du barman et de ses cocktails. On compte sur vous pour mener à bien cette mission !",
         "img"      => "sticky-pizza-06.svg",
         "img_mobile"      => "barman-don-camillo.png",
@@ -75,7 +75,7 @@ return $recrutement = (object) array(
             ),
     ),
     "cuisinier" => (object) array(
-        "title"           => "Cuisinier",
+        "title"           => "Cuisinier•ère",
         "subtitle"         => "Le roi des fourneaux ! Vous jonglez avec les ustensiles comme un chef et réalisez nos délicieux plats haut la main.",
         "img"      => "sticky-pizza-07.svg",
         "img_mobile"      => "cuisinier-don-camillo.png",
@@ -89,7 +89,7 @@ return $recrutement = (object) array(
             ),
     ),
     "plongeur" => (object) array(
-        "title"           => "Plongeur",
+        "title"           => "Plongeur•euse",
         "subtitle"         => "Vous faites briller nos belles assiettes et couverts 20 000 lieux sous la mousse. Sans vous, nos plats n’auraient pas la même allure.",
         "img"      => "sticky-pizza-08.svg",
         "img_mobile"      => "plongeur-don-camillo.png",
