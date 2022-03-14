@@ -33,8 +33,8 @@ return $recrutement = (object) array(
         "img_mobile"      => "pizzaiolos-don-camillo.png",
         "list"     => 
             (object) array(
-                "01"      => "Réaliser la fabrication et cuisson de pizzas",
-                "02"     => "Assure l’approvisionnement des ingrédients",
+                "01"      => "Réalisation des pizzas : conception, fabrication, cuisson",
+                "02"     => "Gestion de l'approvisionnement des ingrédients",
                 "03"     => "Application des normes d’hygiène",
             ),
     ),

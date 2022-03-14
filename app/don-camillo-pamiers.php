@@ -94,7 +94,7 @@ include 'includes/header.php';
                         six, passez-nous un coup de téléphone ! </p>
                     <p class="beige paragr-verySmall center v-maxWidth anim-opacity woow" data-woow-toggle="true"
                         data-woow-offset="70" style="--pMaxWith: 35vw;">*Dolce Vita privatisable à partir de 25
-                        personnes : passez-nous un coup de téléphone !
+                        personnes : appelez-nous pour en savoir plus !
                     </p>
                     <div class="container-bouton center anim-opacity woow" data-woow-toggle="true"
                         data-woow-offset="70">
