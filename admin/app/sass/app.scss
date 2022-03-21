@@ -996,10 +996,26 @@ select.form-control {
 
 .bouton-wrapper {
     display: flex;
+    flex-direction: column;
+}
+
+.bouton-wrapper .flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+.bouton-wrapper-categorie {
+    display: flex;
     flex-wrap: wrap;
 }
 
-.btn-plat{
+
+.btn-plat {
     background-color: #455033;
     color: #fff;
 }
@@ -1009,12 +1025,12 @@ select.form-control {
     color: #fff;
 }
 
-.btn-sous-categorie{
+.btn-sous-categorie {
     background-color: #E39077;
     color: #fff;
 }
 
-.btn-sous-categorie:hover{
+.btn-sous-categorie:hover {
     background-color: #B4725F;
     color: #fff;
 }

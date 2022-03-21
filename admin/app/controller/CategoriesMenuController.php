@@ -60,6 +60,7 @@ function new_categorie_menu(PlatManager $PlatManager, CategorieMenuManager $Cate
     foreach($list_plats as $plat) 
     {
         $list_name_plats[$plat->id_plat()] = $plat->title();
+        $list_desc_plats[$plat->id_plat()] = $plat->descriptif();
     }
 
     //Récupération du nom des sous-catégorie
@@ -116,6 +117,7 @@ function edit_categorie_menu(CategorieMenuManager $manager, PlatManager $PlatMan
         foreach($list_plats as $plat) 
         {
             $list_name_plats[$plat->id_plat()] = $plat->title();
+            $list_desc_plats[$plat->id_plat()] = $plat->descriptif();
         }
 
         //Récupération du nom des sous-catégorie

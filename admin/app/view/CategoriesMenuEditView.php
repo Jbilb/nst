@@ -70,7 +70,8 @@ include 'includes/inc_main_topbar.php';
                                 <div class="col-xs-12 col-sm-8">
                                     <div class="form-group form-checker">
                                         <label class="btn btn-plat">Plat</label><br>
-                                        <label><?=$list_name_plats[$value];?></label>
+                                        <label><?=$list_name_plats[$value];?></label><br>
+                                        <label><?=$list_desc_plats[$value];?></label>
                                         <input type="text" name="plats[<?=$key?>]" class="content hidden"
                                             value="<?=$value;?>">
                                     </div>
@@ -123,10 +124,16 @@ include 'includes/inc_main_topbar.php';
                                     foreach($list_plats as $plat)
                                     {
                             ?>
-                            <button type="button" class="btn btn-plat articleAddItem"
-                                data-target="modele_<?=$plat->id_plat();?>" data-type="text">
-                                <b><?=$plat->title();?></b>
-                            </button>
+                            <div class="flex">
+                                <div>
+                                    <label><?=$plat->title();?></label>
+                                    <p><?=$plat->descriptif();?></p><br>
+                                </div>
+                                <button type="button" class="btn btn-plat articleAddItem"
+                                    data-target="modele_<?=$plat->id_plat();?>" data-type="text">
+                                    <b>Ajouter</b>
+                                </button>
+                            </div>
                             <?php  
                                     }
                                 }
@@ -137,18 +144,20 @@ include 'includes/inc_main_topbar.php';
                         class="col-xs-12 col-md-5 col-md-offset-1 buttons-edition-article">
                         <h4>Ajouter une sous-catégorie</h4>
                         <br />
-                        <div class="bouton-wrapper">
+                        <div class="bouton-wrapper-categorie">
                             <?php 
                                 if(!empty($list_sous_categories)) 
                                 {
                                     foreach($list_sous_categories as $sous_categorie)
                                     {
                             ?>
-                            <button type="button" class="btn btn-sous-categorie articleAddItem"
-                                data-target="modele_sous_categorie_<?=$sous_categorie->id_categorie_menu();?>"
-                                data-type="text">
-                                <b><?=$sous_categorie->name();?></b>
-                            </button>
+                            <div>
+                                <button type="button" class="btn btn-sous-categorie articleAddItem"
+                                    data-target="modele_sous_categorie_<?=$sous_categorie->id_categorie_menu();?>"
+                                    data-type="text">
+                                    <b><?=$sous_categorie->name();?></b>
+                                </button>
+                            </div>
                             <?php  
                                     }
                                 }
@@ -179,7 +188,8 @@ include 'includes/inc_main_topbar.php';
         <div class="col-xs-12 col-sm-8">
             <div class="form-group form-checker">
                 <label class="btn btn-plat">Plat</label><br>
-                <label><?=$plat->title();?></label>
+                <label><?=$plat->title();?></label><br>
+                <label><?=$plat->descriptif();?></label>
                 <input type="text" name="plats[]" class="content hidden" value="<?=$plat->id_plat();?>">
             </div>
         </div>

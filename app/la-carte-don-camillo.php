@@ -109,7 +109,7 @@ include 'includes/header.php';
                                             <p class="vert subtitle"><?=$plat->descriptif();?></p>
                                         </h3>
                                         <div class="plat_price h4 vert">
-                                            <?=$plat->price();?>€
+                                            <?php if($plat->price()) {?> <?=$plat->price();?>€ <?php } ?>
                                         </div>
                                     </div>
                                     <?php } ?>
