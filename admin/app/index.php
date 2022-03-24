@@ -251,110 +251,120 @@ else
             include 'view/NoticeView.php';
         break;
 
-
-        /*** GESTION DU MENU ***/
-
         // ========================================================
-        // Gestion des plats
+        // Gestion des restaurants
         // ========================================================
     
-        case 'plats':
-            include 'controller/PlatsController.php';
+        case 'restaurants':
+            include 'controller/RestaurantsController.php';
             switch($actionName)
             {
                 // Nouvel article
                 case 'new':
-                    new_plat();
+                    new_restaurant();
                 break;
                     
                 // Création d'un plat
                 case 'create':
-                    update_plat($PlatManager, $tools, $form_tools, true);
+                    update_restaurant($RestaurantManager, $tools, $form_tools, true);
                 break;
                 
                 // Edition d'un plat
                 case 'edit':
-                    edit_plat($PlatManager, $tools);
+                    edit_restaurant($RestaurantManager, $tools);
                 break;
                 
                 // Modification d'un plat
                 case 'update':
-                    update_plat($PlatManager, $tools, $form_tools, false);
+                    update_restaurant($RestaurantManager, $tools, $form_tools, false);
                 break;
                 
                 // Suppression d'un plat
                 case 'delete':
-                    delete_plat($PlatManager, $tools);
+                    delete_restaurant($RestaurantManager, $tools);
                 break;
                     
                 // Par défaut : affichage de la liste des plats
                 default:
-                    plats_list($PlatManager, $tools);
+                    restaurants_list($RestaurantManager, $tools);
             }
         break;
 
         // ========================================================
-        // Gestion des catégories de menu
+        // Gestion des faq questions
         // ========================================================
     
-        case 'categories-menu':
-            include 'controller/CategoriesMenuController.php';
+        case 'faq_questions':
+            include 'controller/FaqQuestionsController.php';
             switch($actionName)
             {
-                // Nouvel article
+                // Nouvelle faq
                 case 'new':
-                    new_categorie_menu($PlatManager, $CategorieMenuManager);
+                    new_faq_question();
                 break;
                     
-                // Création d'une catégorie
+                // Création d'un faq
                 case 'create':
-                    update_categorie_menu($CategorieMenuManager, $tools, $form_tools, true);
+                    update_faq_question($FaqQuestionManager, $tools, $form_tools, true);
                 break;
                 
-                // Edition d'une catégorie
+                // Edition d'un faq
                 case 'edit':
-                    edit_categorie_menu($CategorieMenuManager, $PlatManager, $tools);
+                    edit_faq_question($FaqQuestionManager, $tools);
                 break;
                 
-                // Modification d'une catégorie
+                // Modification d'un faq
                 case 'update':
-                    update_categorie_menu($CategorieMenuManager, $tools, $form_tools, false);
+                    update_faq_question($FaqQuestionManager, $tools, $form_tools, false);
                 break;
                 
-                // Suppression d'une catégorie
-                case 'delete':
-                    delete_categorie_menu($CategorieMenuManager, $tools);
+                // Suppression d'une faq
+                    delete_faq_question($FaqQuestionManager, $tools);
                 break;
                     
-                // Par défaut : affichage de la liste des catégories de menu
+                // Par défaut : affichage de la liste des faqs
                 default:
-                    categorie_menu_list($CategorieMenuManager, $tools);
+                    faq_questions_list($FaqQuestionManager, $tools);
             }
         break;
 
         // ========================================================
-        // Gestion du menu
+        // Gestion des offres
         // ========================================================
     
-        case 'menu':
-            include 'controller/MenuController.php';
+        case 'offers':
+            include 'controller/OfferssController.php';
             switch($actionName)
-            {  
-                // Edition du menu
+            {
+                // Nouvelle faq
+                case 'new':
+                    new_offer();
+                break;
+                    
+                // Création d'un faq
+                case 'create':
+                    update_offer($OfferManager, $tools, $form_tools, true);
+                break;
+                
+                // Edition d'un faq
                 case 'edit':
-                    edit_menu($MenuManager, $CategorieMenuManager, $tools);
+                    edit_offer($OfferManager, $tools);
                 break;
                 
-                // Modification du menu
+                // Modification d'un faq
                 case 'update':
-                    update_menu($MenuManager, $tools, $form_tools, false);
+                    update_offer($OfferManager, $tools, $form_tools, false);
                 break;
                 
-                // Par défaut : affichage du menu
+                // Suppression d'une faq
+                    delete_offer($OfferManager, $tools);
+                break;
+                    
+                // Par défaut : affichage de la liste des faqs
                 default:
-                    edit_menu($MenuManager, $CategorieMenuManager,$tools);
+                    offers_list($OfferManager, $tools);
             }
-        break;    
+        break;
     }
 }
 

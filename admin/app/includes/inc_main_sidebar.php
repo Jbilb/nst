@@ -31,15 +31,9 @@
                     <li class="<?=(isset($_GET['page']) && $_GET['page'] == "tags") ? "current-page" : "";?>">
                         <a href="tags/"><i class="fa fa-tags"></i> Tags </a>
                     </li>
-                    <br/><br/>
-                    <li class="<?=(isset($_GET['page']) && $_GET['page'] == "menu") ? "current-page" : "";?>">
-                        <a href="menu/"><i class="fa fa-book"></i> Le Menu </a>
-                    </li>
-                    <li class="<?=(isset($_GET['page']) && $_GET['page'] == "categories-menu") ? "current-page" : "";?>">
-                        <a href="categories-menu/"><i class="fa fa-list"></i> Catégories de menu </a>
-                    </li>     
-                    <li class="<?=(isset($_GET['page']) && $_GET['page'] == "plats") ? "current-page" : "";?>">
-                        <a href="plats/"><i class="fa fa-flask"></i> Plats </a>
+                    <br/><br/>   
+                    <li class="<?=(isset($_GET['page']) && $_GET['page'] == "restaurants") ? "current-page" : "";?>">
+                        <a href="restaurants/"><i class="fa fa-flask"></i> Restaurants </a>
                     </li>
                     <br/><br/>
                     <li class="<?=(isset($_GET['page']) && $_GET['page'] == "users") ? "current-page" : "";?>">

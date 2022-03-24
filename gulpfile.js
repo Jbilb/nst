@@ -1,6 +1,6 @@
 var localhostPath = '/doncamillo-restaurants.fr/app/index.php';
-var localhostProxy = 'http://localhost:8888';
-//var localhostProxy = 'localhost';
+// var localhostProxy = 'http://localhost:8888';
+var localhostProxy = 'localhost';
 
 // BASE
 var gulp = require('gulp');

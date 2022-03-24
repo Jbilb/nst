@@ -946,21 +946,23 @@ $(document).ready(function () {
             var checkbox = document.querySelector("#js-sous-categorie-checkbox")
             var platsButton = document.querySelector("#js-ajout-sous-categorie")
 
-            if (checkbox.checked) {
-                console.log("Checkbox is checked..");
-                platsButton.classList.add('hidden')
-            } else {
-                platsButton.classList.remove('hidden')
-            }
-
-            checkbox.addEventListener('change', function() {
-                if (this.checked) {
+            if (checkbox) {
+                if (checkbox.checked) {
                     console.log("Checkbox is checked..");
                     platsButton.classList.add('hidden')
                 } else {
                     platsButton.classList.remove('hidden')
                 }
-            })
+
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        console.log("Checkbox is checked..");
+                        platsButton.classList.add('hidden')
+                    } else {
+                        platsButton.classList.remove('hidden')
+                    }
+                })
+            }
         }
     });
 })(jQuery);

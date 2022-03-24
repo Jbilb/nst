@@ -1,16 +1,14 @@
 <?php
-class Plat
+class FaqQuestion 
 {
     // ========================================================
     // Définition des attributs de base
     // ========================================================
     
-    private $_id_plat;
+    private $_id_faq_question;
     private $_title;
-    private $_descriptif;
-    private $_price;
-    private $_is_takeaway;
-    
+    private $_description;
+    private $_is_published;
     
     // ========================================================
     // Création du constructeur
@@ -41,40 +39,38 @@ class Plat
     // Getters : récupèrent les valeurs des attributs de l'élément
     // ========================================================
     
-    public function id_plat()
+    public function id_faq_question()
     {
-        return $this->_id_plat;
+        return $this->_id_faq_question;
     }
     public function title()
     {
         return $this->_title;
     }
-    public function descriptif()
+    public function description()
     {
-        return $this->_descriptif;
+        return $this->_description;
     }
-    public function price()
+    public function is_published()
     {
-        return $this->_price;
+        return $this->_is_published;
     }
-    public function is_takeaway()
-    {
-        return $this->_is_takeaway;
-    }
+
     
     // ========================================================
     // Setters : mettent à jour les valeurs des attributs de l'élément
     // ========================================================
     
-    public function setId_plat($id_plat)
+    public function setId_faq_question($id_faq_question)
     {
-        $id_plat = (int) $id_plat;
+        $id_faq_question = (int) $id_faq_question;
         
-        if ($id_plat > 0)
+        if ($id_faq_question > 0)
         {
-          $this->_id_plat = $id_plat;
+          $this->_id_faq_question = $id_faq_question;
         }
     }
+    
     public function setTitle($title)
     {
         if (is_string($title))
@@ -82,26 +78,21 @@ class Plat
           $this->_title = $title;
         }
     }
-    public function setDescriptif($descriptif)
+
+    public function setDescription($description)
     {
-        if (is_string($descriptif))
+        if (is_string($description))
         {
-          $this->_descriptif = $descriptif;
+          $this->_description = $description;
         }
     }
-    public function setPrice($price)
+
+    public function setIs_published($is_published)
     {
-        if (is_string($price))
+        $is_published = (int) $is_published;
+        if ($is_published == 0 || $is_published == 1)
         {
-          $this->_price = $price;
-        }
-    }
-    public function setIs_takeaway($is_takeaway)
-    {
-        $is_takeaway = (int) $is_takeaway;
-        if ($is_takeaway == 0 || $is_takeaway == 1)
-        {
-          $this->_is_takeaway = $is_takeaway;
+          $this->_is_published = $is_published;
         }
     }
 }
